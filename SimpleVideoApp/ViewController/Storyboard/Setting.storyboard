@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting View Controller-->
+        <scene sceneID="52z-3H-QxR">
+            <objects>
+                <viewController id="gK6-xf-FXK" customClass="SettingViewController" customModule="SimpleVideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5GJ-eM-GaI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4J-5k-5yO" customClass="CustomNavigationBarView" customModule="SimpleVideoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="N0H-4I-NPO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="header">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBe-Yi-H7d">
+                                <rect key="frame" x="10" y="89" width="394" height="773"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vwd-qE-nxX">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="120"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ログイン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPe-PD-arF">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgt-TN-Uoa">
+                                                <rect key="frame" x="0.0" y="60" width="394" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="ログアウト">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="actionLogout:" destination="gK6-xf-FXK" eventType="touchUpInside" id="Mvz-La-rcS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="nkX-Ho-SGq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f0G-xN-ltz">
+                                        <rect key="frame" x="0.0" y="120" width="394" height="180"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ストリーミング・ダウンロード設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMI-F8-fZ7">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHL-cT-0c3">
+                                                <rect key="frame" x="0.0" y="60" width="394" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fiのみでストリーミング" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrQ-St-b3G">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvZ-Nx-9iu">
+                                                        <rect key="frame" x="325" y="15" width="51" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Z8i-c3-n2m"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="actionIsWiFiOnlyStreaming:" destination="gK6-xf-FXK" eventType="valueChanged" id="HK5-ST-0wE"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="hvZ-Nx-9iu" firstAttribute="centerY" secondItem="SHL-cT-0c3" secondAttribute="centerY" id="2IB-yX-JQY"/>
+                                                    <constraint firstItem="mrQ-St-b3G" firstAttribute="leading" secondItem="SHL-cT-0c3" secondAttribute="leading" id="6o4-pA-9yE"/>
+                                                    <constraint firstItem="mrQ-St-b3G" firstAttribute="top" secondItem="SHL-cT-0c3" secondAttribute="top" id="Fz3-P6-1wQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hvZ-Nx-9iu" secondAttribute="trailing" constant="20" id="H91-OQ-Oyc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mrQ-St-b3G" secondAttribute="trailing" id="M74-dP-OFJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="mrQ-St-b3G" secondAttribute="bottom" id="fHb-8n-m4M"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivU-fW-urR">
+                                                <rect key="frame" x="0.0" y="120" width="394" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fiのみでダウンロード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQM-MD-Q5K">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-mb-SQL">
+                                                        <rect key="frame" x="325" y="15" width="51" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="ZuI-d5-9OO"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="actionIsWiFiOnlyDownload:" destination="gK6-xf-FXK" eventType="valueChanged" id="aNz-bO-dOd"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="sQM-MD-Q5K" firstAttribute="leading" secondItem="ivU-fW-urR" secondAttribute="leading" id="5gG-n7-tI5"/>
+                                                    <constraint firstItem="sQM-MD-Q5K" firstAttribute="top" secondItem="ivU-fW-urR" secondAttribute="top" id="IIm-Ry-F4S"/>
+                                                    <constraint firstItem="6Mb-mb-SQL" firstAttribute="centerY" secondItem="ivU-fW-urR" secondAttribute="centerY" id="ONT-dJ-UUv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sQM-MD-Q5K" secondAttribute="bottom" id="PoS-jS-gGS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6Mb-mb-SQL" secondAttribute="trailing" constant="20" id="nk6-3F-nzy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sQM-MD-Q5K" secondAttribute="trailing" id="rnU-zd-10o"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="zSO-aD-MQK"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="vwd-qE-nxX" firstAttribute="top" secondItem="PBe-Yi-H7d" secondAttribute="top" id="ACr-0F-5vP"/>
+                                    <constraint firstAttribute="trailing" secondItem="vwd-qE-nxX" secondAttribute="trailing" id="H0I-Cu-afQ"/>
+                                    <constraint firstItem="f0G-xN-ltz" firstAttribute="top" secondItem="vwd-qE-nxX" secondAttribute="bottom" id="YmS-9Z-ILr"/>
+                                    <constraint firstItem="vwd-qE-nxX" firstAttribute="leading" secondItem="PBe-Yi-H7d" secondAttribute="leading" id="nlJ-je-L3W"/>
+                                    <constraint firstItem="f0G-xN-ltz" firstAttribute="leading" secondItem="PBe-Yi-H7d" secondAttribute="leading" id="v8e-Yh-wGd"/>
+                                    <constraint firstAttribute="trailing" secondItem="f0G-xN-ltz" secondAttribute="trailing" id="zPx-5S-n4A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tGr-iZ-I4j" firstAttribute="bottom" secondItem="PBe-Yi-H7d" secondAttribute="bottom" id="KyC-ZF-ch6"/>
+                            <constraint firstItem="PBe-Yi-H7d" firstAttribute="leading" secondItem="tGr-iZ-I4j" secondAttribute="leading" constant="10" id="UY9-XA-7Tg"/>
+                            <constraint firstItem="T4J-5k-5yO" firstAttribute="leading" secondItem="tGr-iZ-I4j" secondAttribute="leading" id="aXp-BH-tz3"/>
+                            <constraint firstItem="T4J-5k-5yO" firstAttribute="top" secondItem="tGr-iZ-I4j" secondAttribute="top" id="euA-za-971"/>
+                            <constraint firstItem="tGr-iZ-I4j" firstAttribute="trailing" secondItem="PBe-Yi-H7d" secondAttribute="trailing" constant="10" id="oYE-1X-3lv"/>
+                            <constraint firstItem="PBe-Yi-H7d" firstAttribute="top" secondItem="T4J-5k-5yO" secondAttribute="bottom" id="tJA-lz-7hP"/>
+                            <constraint firstItem="T4J-5k-5yO" firstAttribute="trailing" secondItem="tGr-iZ-I4j" secondAttribute="trailing" id="wdm-WX-vUE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tGr-iZ-I4j"/>
+                    </view>
+                    <connections>
+                        <outlet property="header" destination="T4J-5k-5yO" id="75z-nX-Oq2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="skU-AW-p2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-515.94202898550725" y="-169.41964285714286"/>
+        </scene>
+    </scenes>
+</document>

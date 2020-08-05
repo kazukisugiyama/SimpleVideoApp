@@ -1,0 +1,6 @@
+framework module Pods_SimpleVideoApp {
+  umbrella header "Pods-SimpleVideoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

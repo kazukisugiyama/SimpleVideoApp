@@ -3,27 +3,93 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02ADE1DA7A497DCA4CD129E2 /* Pods_SimpleVideoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB13B2B6C9FAAABE0DA23B1 /* Pods_SimpleVideoApp.framework */; };
+		B77C697A24D9BA0F00F25E4A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77C697924D9BA0F00F25E4A /* LoginPresenter.swift */; };
+		B782733C24D8812E005A2FD6 /* PurchasedVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782733B24D8812E005A2FD6 /* PurchasedVideo.storyboard */; };
+		B782733E24D88148005A2FD6 /* DownloadedVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782733D24D88148005A2FD6 /* DownloadedVideo.storyboard */; };
+		B782734024D88165005A2FD6 /* MyList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782733F24D88165005A2FD6 /* MyList.storyboard */; };
+		B782734224D88186005A2FD6 /* SearchVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782734124D88186005A2FD6 /* SearchVideo.storyboard */; };
+		B782734424D881BC005A2FD6 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782734324D881BC005A2FD6 /* Setting.storyboard */; };
+		B782734624D88210005A2FD6 /* SearchVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782734524D88210005A2FD6 /* SearchVideoViewController.swift */; };
+		B782734824D88225005A2FD6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782734724D88225005A2FD6 /* SettingViewController.swift */; };
+		B782734C24D88380005A2FD6 /* PurchasedVideoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782734B24D88380005A2FD6 /* PurchasedVideoPresenter.swift */; };
+		B782734E24D8838C005A2FD6 /* DownloadedVideoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782734D24D8838C005A2FD6 /* DownloadedVideoPresenter.swift */; };
+		B782735024D8839B005A2FD6 /* MyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782734F24D8839B005A2FD6 /* MyListPresenter.swift */; };
+		B782735224D883AB005A2FD6 /* SearchVideoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735124D883AB005A2FD6 /* SearchVideoPresenter.swift */; };
+		B782735424D883B8005A2FD6 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735324D883B8005A2FD6 /* SettingPresenter.swift */; };
+		B782735624D88422005A2FD6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735524D88422005A2FD6 /* LoginModel.swift */; };
+		B782735824D88434005A2FD6 /* PurchasedVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735724D88434005A2FD6 /* PurchasedVideoModel.swift */; };
+		B782735A24D88445005A2FD6 /* DownloadedVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */; };
+		B782735C24D88455005A2FD6 /* MyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735B24D88455005A2FD6 /* MyListModel.swift */; };
+		B782735E24D88465005A2FD6 /* SearchVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735D24D88465005A2FD6 /* SearchVideoModel.swift */; };
+		B782736024D88474005A2FD6 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735F24D88474005A2FD6 /* SettingModel.swift */; };
+		B785CE6A24D9C3B40036393B /* CommonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B785CE6924D9C3B40036393B /* CommonPresenter.swift */; };
+		B785CE6C24D9C44E0036393B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B785CE6B24D9C44E0036393B /* BaseViewController.swift */; };
+		B791312A24DA861E00E0892A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791312924DA861E00E0892A /* R.generated.swift */; };
+		B791312C24DA8C8600E0892A /* PurchasedVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791312B24DA8C8600E0892A /* PurchasedVideoViewController.swift */; };
+		B791312E24DA93F300E0892A /* SlideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B791312D24DA93F300E0892A /* SlideMenu.storyboard */; };
+		B791313224DA9FE500E0892A /* CustomNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B791313124DA9FE500E0892A /* CustomNavigationBarView.xib */; };
+		B791313824DAA0D000E0892A /* CustomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791313724DAA0CF00E0892A /* CustomNavigationBarView.swift */; };
+		B791313A24DAA0F800E0892A /* VideoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791313924DAA0F800E0892A /* VideoListTableViewCell.swift */; };
+		B791313C24DABA0C00E0892A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791313B24DABA0C00E0892A /* BaseView.swift */; };
 		B79E8A4E24D8788C00923859 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E8A4D24D8788C00923859 /* AppDelegate.swift */; };
 		B79E8A5024D8788C00923859 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E8A4F24D8788C00923859 /* SceneDelegate.swift */; };
-		B79E8A5224D8788C00923859 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E8A5124D8788C00923859 /* ViewController.swift */; };
-		B79E8A5524D8788C00923859 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79E8A5324D8788C00923859 /* Main.storyboard */; };
+		B79E8A5224D8788C00923859 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E8A5124D8788C00923859 /* LoginViewController.swift */; };
+		B79E8A5524D8788C00923859 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79E8A5324D8788C00923859 /* Login.storyboard */; };
 		B79E8A5724D8788F00923859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79E8A5624D8788F00923859 /* Assets.xcassets */; };
 		B79E8A5A24D8788F00923859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79E8A5824D8788F00923859 /* LaunchScreen.storyboard */; };
+		B79E8A6424D87C0300923859 /* DownloadedVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E8A6324D87C0300923859 /* DownloadedVideoTableViewController.swift */; };
+		B79E8A6624D87C3900923859 /* MyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E8A6524D87C3900923859 /* MyListTableViewController.swift */; };
+		B7A2ADA924DAFEBD009B53C0 /* VideoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7A2ADA824DAFEBD009B53C0 /* VideoListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F3B7AE048029E371A96A30C /* Pods-SimpleVideoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleVideoApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleVideoApp/Pods-SimpleVideoApp.release.xcconfig"; sourceTree = "<group>"; };
+		B77C697924D9BA0F00F25E4A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		B782733B24D8812E005A2FD6 /* PurchasedVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PurchasedVideo.storyboard; sourceTree = "<group>"; };
+		B782733D24D88148005A2FD6 /* DownloadedVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DownloadedVideo.storyboard; sourceTree = "<group>"; };
+		B782733F24D88165005A2FD6 /* MyList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyList.storyboard; sourceTree = "<group>"; };
+		B782734124D88186005A2FD6 /* SearchVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchVideo.storyboard; sourceTree = "<group>"; };
+		B782734324D881BC005A2FD6 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		B782734524D88210005A2FD6 /* SearchVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoViewController.swift; sourceTree = "<group>"; };
+		B782734724D88225005A2FD6 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B782734B24D88380005A2FD6 /* PurchasedVideoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedVideoPresenter.swift; sourceTree = "<group>"; };
+		B782734D24D8838C005A2FD6 /* DownloadedVideoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedVideoPresenter.swift; sourceTree = "<group>"; };
+		B782734F24D8839B005A2FD6 /* MyListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListPresenter.swift; sourceTree = "<group>"; };
+		B782735124D883AB005A2FD6 /* SearchVideoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoPresenter.swift; sourceTree = "<group>"; };
+		B782735324D883B8005A2FD6 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
+		B782735524D88422005A2FD6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B782735724D88434005A2FD6 /* PurchasedVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedVideoModel.swift; sourceTree = "<group>"; };
+		B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedVideoModel.swift; sourceTree = "<group>"; };
+		B782735B24D88455005A2FD6 /* MyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListModel.swift; sourceTree = "<group>"; };
+		B782735D24D88465005A2FD6 /* SearchVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoModel.swift; sourceTree = "<group>"; };
+		B782735F24D88474005A2FD6 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		B785CE6924D9C3B40036393B /* CommonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPresenter.swift; sourceTree = "<group>"; };
+		B785CE6B24D9C44E0036393B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B791312924DA861E00E0892A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		B791312B24DA8C8600E0892A /* PurchasedVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedVideoViewController.swift; sourceTree = "<group>"; };
+		B791312D24DA93F300E0892A /* SlideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SlideMenu.storyboard; sourceTree = "<group>"; };
+		B791313124DA9FE500E0892A /* CustomNavigationBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationBarView.xib; sourceTree = "<group>"; };
+		B791313724DAA0CF00E0892A /* CustomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomNavigationBarView.swift; path = /Users/sugiyamakazuki/1_SwiftProjects/SimpleVideoApp/CustomNavigationBarView.swift; sourceTree = "<absolute>"; };
+		B791313924DAA0F800E0892A /* VideoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListTableViewCell.swift; sourceTree = "<group>"; };
+		B791313B24DABA0C00E0892A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B79E8A4A24D8788C00923859 /* SimpleVideoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleVideoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79E8A4D24D8788C00923859 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B79E8A4F24D8788C00923859 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B79E8A5124D8788C00923859 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B79E8A5424D8788C00923859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B79E8A5124D8788C00923859 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B79E8A5424D8788C00923859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		B79E8A5624D8788F00923859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B79E8A5924D8788F00923859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B79E8A5B24D8788F00923859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B79E8A6324D87C0300923859 /* DownloadedVideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedVideoTableViewController.swift; sourceTree = "<group>"; };
+		B79E8A6524D87C3900923859 /* MyListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListTableViewController.swift; sourceTree = "<group>"; };
+		B7A2ADA824DAFEBD009B53C0 /* VideoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoListTableViewCell.xib; sourceTree = "<group>"; };
+		BBB13B2B6C9FAAABE0DA23B1 /* Pods_SimpleVideoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleVideoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA541419D3905C071916D5C7 /* Pods-SimpleVideoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleVideoApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleVideoApp/Pods-SimpleVideoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +97,115 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02ADE1DA7A497DCA4CD129E2 /* Pods_SimpleVideoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32EEB1901786150249189305 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBB13B2B6C9FAAABE0DA23B1 /* Pods_SimpleVideoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB68E9AE5C52403B22D95A8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA541419D3905C071916D5C7 /* Pods-SimpleVideoApp.debug.xcconfig */,
+				8F3B7AE048029E371A96A30C /* Pods-SimpleVideoApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B782733524D87FC3005A2FD6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B785CE6924D9C3B40036393B /* CommonPresenter.swift */,
+				B77C697924D9BA0F00F25E4A /* LoginPresenter.swift */,
+				B782734B24D88380005A2FD6 /* PurchasedVideoPresenter.swift */,
+				B782734D24D8838C005A2FD6 /* DownloadedVideoPresenter.swift */,
+				B782734F24D8839B005A2FD6 /* MyListPresenter.swift */,
+				B782735124D883AB005A2FD6 /* SearchVideoPresenter.swift */,
+				B782735324D883B8005A2FD6 /* SettingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B782733824D8801A005A2FD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B782735524D88422005A2FD6 /* LoginModel.swift */,
+				B782735724D88434005A2FD6 /* PurchasedVideoModel.swift */,
+				B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */,
+				B782735B24D88455005A2FD6 /* MyListModel.swift */,
+				B782735D24D88465005A2FD6 /* SearchVideoModel.swift */,
+				B782735F24D88474005A2FD6 /* SettingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B782733924D8802B005A2FD6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B782733A24D880E5005A2FD6 /* Storyboard */,
+				B785CE6B24D9C44E0036393B /* BaseViewController.swift */,
+				B79E8A5124D8788C00923859 /* LoginViewController.swift */,
+				B791312B24DA8C8600E0892A /* PurchasedVideoViewController.swift */,
+				B79E8A6324D87C0300923859 /* DownloadedVideoTableViewController.swift */,
+				B79E8A6524D87C3900923859 /* MyListTableViewController.swift */,
+				B782734524D88210005A2FD6 /* SearchVideoViewController.swift */,
+				B782734724D88225005A2FD6 /* SettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B782733A24D880E5005A2FD6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B79E8A5324D8788C00923859 /* Login.storyboard */,
+				B782733B24D8812E005A2FD6 /* PurchasedVideo.storyboard */,
+				B782733D24D88148005A2FD6 /* DownloadedVideo.storyboard */,
+				B782733F24D88165005A2FD6 /* MyList.storyboard */,
+				B782734124D88186005A2FD6 /* SearchVideo.storyboard */,
+				B782734324D881BC005A2FD6 /* Setting.storyboard */,
+				B791312D24DA93F300E0892A /* SlideMenu.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B791312F24DA9F7E00E0892A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B791313024DA9F9300E0892A /* xib */,
+				B791313B24DABA0C00E0892A /* BaseView.swift */,
+				B791313724DAA0CF00E0892A /* CustomNavigationBarView.swift */,
+				B791313924DAA0F800E0892A /* VideoListTableViewCell.swift */,
+			);
+			name = View;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B791313024DA9F9300E0892A /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				B791313124DA9FE500E0892A /* CustomNavigationBarView.xib */,
+				B7A2ADA824DAFEBD009B53C0 /* VideoListTableViewCell.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
 		B79E8A4124D8788C00923859 = {
 			isa = PBXGroup;
 			children = (
+				B791312924DA861E00E0892A /* R.generated.swift */,
 				B79E8A4C24D8788C00923859 /* SimpleVideoApp */,
 				B79E8A4B24D8788C00923859 /* Products */,
+				AB68E9AE5C52403B22D95A8D /* Pods */,
+				32EEB1901786150249189305 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +220,12 @@
 		B79E8A4C24D8788C00923859 /* SimpleVideoApp */ = {
 			isa = PBXGroup;
 			children = (
+				B782733824D8801A005A2FD6 /* Model */,
+				B782733924D8802B005A2FD6 /* ViewController */,
+				B791312F24DA9F7E00E0892A /* View */,
+				B782733524D87FC3005A2FD6 /* Presenter */,
 				B79E8A4D24D8788C00923859 /* AppDelegate.swift */,
 				B79E8A4F24D8788C00923859 /* SceneDelegate.swift */,
-				B79E8A5124D8788C00923859 /* ViewController.swift */,
-				B79E8A5324D8788C00923859 /* Main.storyboard */,
 				B79E8A5624D8788F00923859 /* Assets.xcassets */,
 				B79E8A5824D8788F00923859 /* LaunchScreen.storyboard */,
 				B79E8A5B24D8788F00923859 /* Info.plist */,
@@ -74,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B79E8A5E24D8788F00923859 /* Build configuration list for PBXNativeTarget "SimpleVideoApp" */;
 			buildPhases = (
+				FC197387A18A4042FCA16AEC /* [CP] Check Pods Manifest.lock */,
+				B791312824DA857F00E0892A /* Run Script */,
 				B79E8A4624D8788C00923859 /* Sources */,
 				B79E8A4724D8788C00923859 /* Frameworks */,
 				B79E8A4824D8788C00923859 /* Resources */,
+				DD352E927E10036BE7E4FE52 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,34 +294,127 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B79E8A5524D8788C00923859 /* Login.storyboard in Resources */,
+				B782734224D88186005A2FD6 /* SearchVideo.storyboard in Resources */,
 				B79E8A5A24D8788F00923859 /* LaunchScreen.storyboard in Resources */,
+				B782733E24D88148005A2FD6 /* DownloadedVideo.storyboard in Resources */,
+				B782734024D88165005A2FD6 /* MyList.storyboard in Resources */,
+				B791312E24DA93F300E0892A /* SlideMenu.storyboard in Resources */,
 				B79E8A5724D8788F00923859 /* Assets.xcassets in Resources */,
-				B79E8A5524D8788C00923859 /* Main.storyboard in Resources */,
+				B791313224DA9FE500E0892A /* CustomNavigationBarView.xib in Resources */,
+				B782733C24D8812E005A2FD6 /* PurchasedVideo.storyboard in Resources */,
+				B7A2ADA924DAFEBD009B53C0 /* VideoListTableViewCell.xib in Resources */,
+				B782734424D881BC005A2FD6 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B791312824DA857F00E0892A /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		DD352E927E10036BE7E4FE52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleVideoApp/Pods-SimpleVideoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleVideoApp/Pods-SimpleVideoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleVideoApp/Pods-SimpleVideoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC197387A18A4042FCA16AEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleVideoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B79E8A4624D8788C00923859 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B79E8A5224D8788C00923859 /* ViewController.swift in Sources */,
+				B782736024D88474005A2FD6 /* SettingModel.swift in Sources */,
+				B791313C24DABA0C00E0892A /* BaseView.swift in Sources */,
+				B79E8A5224D8788C00923859 /* LoginViewController.swift in Sources */,
 				B79E8A4E24D8788C00923859 /* AppDelegate.swift in Sources */,
+				B782734624D88210005A2FD6 /* SearchVideoViewController.swift in Sources */,
+				B791313A24DAA0F800E0892A /* VideoListTableViewCell.swift in Sources */,
+				B782735C24D88455005A2FD6 /* MyListModel.swift in Sources */,
+				B782734824D88225005A2FD6 /* SettingViewController.swift in Sources */,
+				B782735424D883B8005A2FD6 /* SettingPresenter.swift in Sources */,
+				B791313824DAA0D000E0892A /* CustomNavigationBarView.swift in Sources */,
+				B79E8A6424D87C0300923859 /* DownloadedVideoTableViewController.swift in Sources */,
+				B782735024D8839B005A2FD6 /* MyListPresenter.swift in Sources */,
+				B79E8A6624D87C3900923859 /* MyListTableViewController.swift in Sources */,
+				B791312C24DA8C8600E0892A /* PurchasedVideoViewController.swift in Sources */,
+				B782735A24D88445005A2FD6 /* DownloadedVideoModel.swift in Sources */,
+				B782735224D883AB005A2FD6 /* SearchVideoPresenter.swift in Sources */,
+				B791312A24DA861E00E0892A /* R.generated.swift in Sources */,
+				B782735624D88422005A2FD6 /* LoginModel.swift in Sources */,
+				B785CE6C24D9C44E0036393B /* BaseViewController.swift in Sources */,
+				B782735824D88434005A2FD6 /* PurchasedVideoModel.swift in Sources */,
+				B782735E24D88465005A2FD6 /* SearchVideoModel.swift in Sources */,
+				B782734C24D88380005A2FD6 /* PurchasedVideoPresenter.swift in Sources */,
+				B782734E24D8838C005A2FD6 /* DownloadedVideoPresenter.swift in Sources */,
 				B79E8A5024D8788C00923859 /* SceneDelegate.swift in Sources */,
+				B785CE6A24D9C3B40036393B /* CommonPresenter.swift in Sources */,
+				B77C697A24D9BA0F00F25E4A /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B79E8A5324D8788C00923859 /* Main.storyboard */ = {
+		B79E8A5324D8788C00923859 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B79E8A5424D8788C00923859 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		B79E8A5824D8788F00923859 /* LaunchScreen.storyboard */ = {
@@ -282,6 +544,7 @@
 		};
 		B79E8A5F24D8788F00923859 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA541419D3905C071916D5C7 /* Pods-SimpleVideoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -293,12 +556,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.testproject.SimpleVideoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B79E8A6024D8788F00923859 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F3B7AE048029E371A96A30C /* Pods-SimpleVideoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,7 +574,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.testproject.SimpleVideoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
