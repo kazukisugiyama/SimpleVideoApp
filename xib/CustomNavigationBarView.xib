@@ -12,6 +12,7 @@
                 <outlet property="leftButton" destination="DAr-gh-NQk" id="ZV0-yE-ZNp"/>
                 <outlet property="rightButton1" destination="L2O-C3-tKM" id="aSn-8g-DW6"/>
                 <outlet property="rightButton2" destination="6Al-6d-fwi" id="Pm7-LK-U6u"/>
+                <outlet property="titleNavigationItem" destination="3O0-9V-W9t" id="Tfi-IK-GwT"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

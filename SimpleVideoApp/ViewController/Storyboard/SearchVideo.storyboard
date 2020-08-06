@@ -1,23 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4cX-6p-8qX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="VgB-Uq-e1G">
+        <!--Search Video View Controller-->
+        <scene sceneID="zTd-Dd-NMW">
             <objects>
-                <navigationController id="u0I-Rx-w5o" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UEj-zN-GSU">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mda-9U-5Yw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="4cX-6p-8qX" customClass="SearchVideoViewController" customModule="SimpleVideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6yf-yX-zoU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y51-MU-G7a" customClass="CustomNavigationBarView" customModule="SimpleVideoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Vuq-oz-Iip"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="header">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oio-2Z-sSr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Y51-MU-G7a" firstAttribute="trailing" secondItem="lBQ-4b-SXG" secondAttribute="trailing" id="8kb-OG-mhd"/>
+                            <constraint firstItem="Oio-2Z-sSr" firstAttribute="trailing" secondItem="lBQ-4b-SXG" secondAttribute="trailing" id="GPM-gI-42I"/>
+                            <constraint firstItem="Y51-MU-G7a" firstAttribute="top" secondItem="lBQ-4b-SXG" secondAttribute="top" id="brF-KE-Jzm"/>
+                            <constraint firstAttribute="bottom" secondItem="Oio-2Z-sSr" secondAttribute="bottom" id="du5-zH-yZd"/>
+                            <constraint firstItem="Oio-2Z-sSr" firstAttribute="top" secondItem="Y51-MU-G7a" secondAttribute="bottom" id="eeK-CC-aFS"/>
+                            <constraint firstItem="Y51-MU-G7a" firstAttribute="leading" secondItem="lBQ-4b-SXG" secondAttribute="leading" id="iPC-4q-gE4"/>
+                            <constraint firstItem="Oio-2Z-sSr" firstAttribute="leading" secondItem="lBQ-4b-SXG" secondAttribute="leading" id="zg7-7N-5jn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lBQ-4b-SXG"/>
+                    </view>
+                    <connections>
+                        <outlet property="header" destination="Y51-MU-G7a" id="kRS-5q-PWV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ne9-fI-rSK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-349" y="-76"/>
+            <point key="canvasLocation" x="-155" y="-137"/>
         </scene>
     </scenes>
 </document>

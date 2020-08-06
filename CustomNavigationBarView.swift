@@ -36,6 +36,7 @@ class CustomNavigationBarView: BaseView {
     
     private var headerType: HeaderType = .purchased
     
+    @IBOutlet weak var titleNavigationItem: UINavigationItem!
     @IBOutlet weak var leftButton: UIBarButtonItem!
     @IBOutlet weak var rightButton1: UIBarButtonItem!
     @IBOutlet weak var rightButton2: UIBarButtonItem!
@@ -59,9 +60,11 @@ class CustomNavigationBarView: BaseView {
         delegate?.actionRightButton2()
     }
     
+    // TODO: 重複処理になっているため改良の余地あり
     private func updateView() {
         switch headerType {
         case .purchased:
+            titleNavigationItem.title = "購入済み"
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "line.horizontal.3")
             rightButton1.isEnabled = true
@@ -69,13 +72,16 @@ class CustomNavigationBarView: BaseView {
             rightButton2.isEnabled = true
             rightButton2.image = UIImage(systemName: "arrow.counterclockwise")
         case .downloaded:
+            titleNavigationItem.title = "ダウンロード済み"
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "line.horizontal.3")
             rightButton1.isEnabled = false
             rightButton1.image = UIImage(systemName: "")
+            rightButton1.tintColor = UIColor.clear
             rightButton2.isEnabled = true
             rightButton2.image = UIImage(systemName: "arrow.counterclockwise")
         case .myList:
+            titleNavigationItem.title = "マイリスト"
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "line.horizontal.3")
             rightButton1.isEnabled = true
@@ -83,19 +89,25 @@ class CustomNavigationBarView: BaseView {
             rightButton2.isEnabled = true
             rightButton2.image = UIImage(systemName: "arrow.counterclockwise")
         case .search:
+            titleNavigationItem.title = "検索"
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "arrow.left")
             rightButton1.isEnabled = false
             rightButton1.image = UIImage(systemName: "")
+            rightButton1.tintColor = UIColor.clear
             rightButton2.isEnabled = false
             rightButton2.image = UIImage(systemName: "")
+            rightButton2.tintColor = UIColor.clear
         case .setting:
+            titleNavigationItem.title = "設定"
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "arrow.left")
             rightButton1.isEnabled = false
             rightButton1.image = UIImage(systemName: "")
+            rightButton1.tintColor = UIColor.clear
             rightButton2.isEnabled = false
             rightButton2.image = UIImage(systemName: "")
+            rightButton2.tintColor = UIColor.clear
         }
     }
     

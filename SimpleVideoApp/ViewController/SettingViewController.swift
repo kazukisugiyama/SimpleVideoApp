@@ -19,7 +19,7 @@ class SettingViewController: BaseViewController {
     
     @IBAction func actionLogout(_ sender: Any) {
         // ログアウト状態にして、ログイン画面に遷移させる
-        showlogin()
+        showLogin()
     }
     
     @IBAction func actionIsWiFiOnlyStreaming(_ sender: UISwitch) {
@@ -42,23 +42,24 @@ class SettingViewController: BaseViewController {
         }
     }
     
-    private func showlogin() {
+    private func showLogin() {
         let storyboard = R.storyboard.login()
         showStoryBoard(storyboard)
     }
 }
 
 extension SettingViewController: CustomNavigationBarViewDelegate {
-    func actionRightButton1() {
+    func actionLeftButton() {
         // 前画面へ戻る
+        showPurchasedVideo()
     }
-    
-    func actionRightButton2() {
+
+    func actionRightButton1() {
         // 処理なし
         return
     }
     
-    func actionLeftButton() {
+    func actionRightButton2() {
         // 処理なし
         return
     }

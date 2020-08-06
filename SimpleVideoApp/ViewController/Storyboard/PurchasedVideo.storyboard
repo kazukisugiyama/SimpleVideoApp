@@ -41,7 +41,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoListTableViewCell" id="Vbo-cq-Enc" customClass="VideoListTableViewCell" customModule="SimpleVideoApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Vbo-cq-Enc">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vbo-cq-Enc" id="aRK-3Q-Cb6">
@@ -57,6 +57,7 @@
                     </view>
                     <connections>
                         <outlet property="header" destination="LpZ-Fc-agJ" id="jum-8o-Wml"/>
+                        <outlet property="sortButton" destination="Nvf-5a-I8C" id="hUQ-Xg-o5E"/>
                         <outlet property="tableView" destination="gZc-S8-dFQ" id="tUV-Pk-6El"/>
                     </connections>
                 </viewController>

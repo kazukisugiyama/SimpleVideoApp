@@ -10,7 +10,7 @@ import UIKit
 
 class VideoListTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
     
     var videoModel: VideoModel? {
         didSet {
@@ -21,7 +21,6 @@ class VideoListTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        titleLabel.text = ""
     }
     
     required init?(coder: NSCoder) {
@@ -30,5 +29,6 @@ class VideoListTableViewCell: UITableViewCell {
     
     @IBAction func actionDownload(_ sender: Any) {
         // 端末にダウンロードを行う
+        NSLog("DownLoad")
     }
 }

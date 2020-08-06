@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController {
         checkTextField(mail: mailTextField.text, password: passwordTextField.text)
         // サーバへ通信する
         // 結果がOKであればつPurchasedVideoに遷移
-        showPyrchasedVideo()
+        showPurchasedVideo()
     }
     
     @IBAction func actionReissue(_ sender: Any) {
@@ -55,11 +55,6 @@ class LoginViewController: BaseViewController {
             warningPasswordLabel.isHidden = true
         }
         //登録されていないアドレス、パスワードの場合エラーを返す
-    }
-    
-    private func showPyrchasedVideo() {
-        let storyboard = R.storyboard.purchasedVideo()
-        showStoryBoard(storyboard)
     }
     
 }

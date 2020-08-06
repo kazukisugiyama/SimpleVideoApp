@@ -17,9 +17,10 @@ struct VideoModel {
     }
 }
 
-class PurchasedVideoViewController: UIViewController {
+class PurchasedVideoViewController: BaseViewController {
     
     // testデータ
+    // 後ほどモデルに移す
     private let testVideo: [VideoModel] = [
         VideoModel(title: "それいけアンパンマン"),
         VideoModel(title: "ドラえもん"),
@@ -28,23 +29,32 @@ class PurchasedVideoViewController: UIViewController {
     
     @IBOutlet weak var header: CustomNavigationBarView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sortButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         header.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "VideoListTableViewCell", bundle: nil), forCellReuseIdentifier: "VideoListTableViewCell")
+        // Identifierの設定
+        let nib = UINib(nibName: "VideoListTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "VideoListTableViewCell2")
     }
     
     @IBAction func actionSort(_ sender: Any) {
-        // 昇順、降順でソートを行う
+        // 登録された日付で昇順、降順でソートを行う
+        if sortButton.title == "購入日が新しい順" {
+            sortButton.title = "購入日が古い順"
+        } else {
+            sortButton.title = "購入日が新しい順"
+        }
     }
 }
 
 extension PurchasedVideoViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
         // メニューの表示
+        slideMenuController()?.openLeft()
     }
     
     func actionRightButton1() {
@@ -69,7 +79,13 @@ extension PurchasedVideoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /*
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.videoListTableViewCell,for: indexPath) else {
+            return UITableViewCell()
+        }
+        cell.videoModel = testVideo[indexPath.row]
+ */
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "VideoListTableViewCell2", for: indexPath) as? VideoListTableViewCell else {
             return UITableViewCell()
         }
         cell.videoModel = testVideo[indexPath.row]

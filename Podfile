@@ -8,5 +8,6 @@ target 'SimpleVideoApp' do
   # Pods for SimpleVideoApp
 
 pod 'R.swift'
+pod 'SlideMenuControllerSwift'
 
 end

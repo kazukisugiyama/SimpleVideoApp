@@ -2,19 +2,23 @@ PODS:
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
+  - SlideMenuControllerSwift (4.0.0)
 
 DEPENDENCIES:
   - R.swift
+  - SlideMenuControllerSwift
 
 SPEC REPOS:
   trunk:
     - R.swift
     - R.swift.Library
+    - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
 
-PODFILE CHECKSUM: 9a98e728f62325f14e72698d1c370ca347ae4d4a
+PODFILE CHECKSUM: c801854a631aca955c44ef5f19e236039dea1ff0
 
 COCOAPODS: 1.9.3

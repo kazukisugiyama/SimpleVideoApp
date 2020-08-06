@@ -1,23 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ezF-Gi-J6g">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="ijj-FG-KMT">
+        <!--Downloaded Video View Controller-->
+        <scene sceneID="qtl-GR-hwC">
             <objects>
-                <navigationController id="44b-eY-Ngd" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HMq-Yt-v4v">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PM3-Yc-6Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="ezF-Gi-J6g" customClass="DownloadedVideoViewController" customModule="SimpleVideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jdd-HN-rTr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-Ov-PTZ" customClass="CustomNavigationBarView" customModule="SimpleVideoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RBx-ag-cED"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="header">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dLW-Fd-O44">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dLW-Fd-O44" firstAttribute="top" secondItem="ru8-Ov-PTZ" secondAttribute="bottom" id="KCE-6o-8pW"/>
+                            <constraint firstItem="dLW-Fd-O44" firstAttribute="leading" secondItem="N5h-Ub-Hxz" secondAttribute="leading" id="PzO-0z-vdB"/>
+                            <constraint firstAttribute="bottom" secondItem="dLW-Fd-O44" secondAttribute="bottom" id="c84-5Q-lKd"/>
+                            <constraint firstItem="ru8-Ov-PTZ" firstAttribute="top" secondItem="N5h-Ub-Hxz" secondAttribute="top" id="hcR-mN-oTt"/>
+                            <constraint firstItem="ru8-Ov-PTZ" firstAttribute="trailing" secondItem="N5h-Ub-Hxz" secondAttribute="trailing" id="l4x-OI-ElW"/>
+                            <constraint firstItem="dLW-Fd-O44" firstAttribute="top" secondItem="ru8-Ov-PTZ" secondAttribute="bottom" id="lPV-In-ak2"/>
+                            <constraint firstItem="dLW-Fd-O44" firstAttribute="trailing" secondItem="N5h-Ub-Hxz" secondAttribute="trailing" id="vTM-ua-83k"/>
+                            <constraint firstItem="ru8-Ov-PTZ" firstAttribute="leading" secondItem="N5h-Ub-Hxz" secondAttribute="leading" id="w5E-jQ-pAc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N5h-Ub-Hxz"/>
+                    </view>
+                    <connections>
+                        <outlet property="header" destination="ru8-Ov-PTZ" id="oBB-wc-5At"/>
+                        <outlet property="tableView" destination="dLW-Fd-O44" id="LH3-2c-54g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTO-cf-OQq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-268" y="-132"/>
+            <point key="canvasLocation" x="-215.94202898550725" y="-156.02678571428569"/>
         </scene>
     </scenes>
 </document>

@@ -1,14 +1,14 @@
 //
-//  SearchVideoViewController.swift
+//  MyListViewController.swift
 //  SimpleVideoApp
 //
-//  Created by 杉山和輝 on 2020/08/04.
+//  Created by 杉山和輝 on 2020/08/06.
 //  Copyright © 2020 杉山和輝. All rights reserved.
 //
 
 import UIKit
 
-class SearchVideoViewController: BaseViewController {
+class MyListViewController: BaseViewController {
     
     @IBOutlet weak var header: CustomNavigationBarView!
 
@@ -16,11 +16,13 @@ class SearchVideoViewController: BaseViewController {
         super.viewDidLoad()
         header.delegate = self
     }
+
 }
 
-extension SearchVideoViewController: CustomNavigationBarViewDelegate {
+extension MyListViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
-        showPurchasedVideo()
+        // メニューボタン表示
+        slideMenuController()?.openLeft()
     }
     
     func actionRightButton1() {
@@ -29,7 +31,6 @@ extension SearchVideoViewController: CustomNavigationBarViewDelegate {
     }
     
     func actionRightButton2() {
-        // 処理なし
-        return
+        // 更新ボタン
     }
 }
