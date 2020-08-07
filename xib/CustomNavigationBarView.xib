@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavigationBarView" customModule="SimpleVideoApp" customModuleProvider="target">
             <connections>
                 <outlet property="leftButton" destination="DAr-gh-NQk" id="ZV0-yE-ZNp"/>
+                <outlet property="navigationBar" destination="Tfs-w8-7s9" id="Lyy-A9-o5h"/>
                 <outlet property="rightButton1" destination="L2O-C3-tKM" id="aSn-8g-DW6"/>
                 <outlet property="rightButton2" destination="6Al-6d-fwi" id="Pm7-LK-U6u"/>
                 <outlet property="titleNavigationItem" destination="3O0-9V-W9t" id="Tfi-IK-GwT"/>

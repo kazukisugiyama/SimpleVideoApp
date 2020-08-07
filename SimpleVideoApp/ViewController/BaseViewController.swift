@@ -37,7 +37,8 @@ extension BaseViewController: BaseViewProtocol {
     }
     
     func showPurchasedVideo() {
-        let storyboard = R.storyboard.purchasedVideoBase()
+        //let storyboard = R.storyboard.purchasedVideoBase()
+        let storyboard = R.storyboard.videoPlayer()
         showStoryBoard(storyboard)
     }    
 }

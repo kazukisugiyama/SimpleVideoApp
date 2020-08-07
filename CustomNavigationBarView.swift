@@ -20,6 +20,7 @@ class CustomNavigationBarView: BaseView {
         case myList
         case search
         case setting
+        case player
     }
     
     @IBInspectable var header: Int {
@@ -37,6 +38,7 @@ class CustomNavigationBarView: BaseView {
     private var headerType: HeaderType = .purchased
     
     @IBOutlet weak var titleNavigationItem: UINavigationItem!
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var leftButton: UIBarButtonItem!
     @IBOutlet weak var rightButton1: UIBarButtonItem!
     @IBOutlet weak var rightButton2: UIBarButtonItem!
@@ -100,6 +102,18 @@ class CustomNavigationBarView: BaseView {
             rightButton2.tintColor = UIColor.clear
         case .setting:
             titleNavigationItem.title = "設定"
+            leftButton.isEnabled = true
+            leftButton.image = UIImage(systemName: "arrow.left")
+            rightButton1.isEnabled = false
+            rightButton1.image = UIImage(systemName: "")
+            rightButton1.tintColor = UIColor.clear
+            rightButton2.isEnabled = false
+            rightButton2.image = UIImage(systemName: "")
+            rightButton2.tintColor = UIColor.clear
+        case .player:
+            titleNavigationItem.title = ""
+            navigationBar.backgroundColor = UIColor.black
+            //navigationBar.tintColor = UIColor.white
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "arrow.left")
             rightButton1.isEnabled = false
