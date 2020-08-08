@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eWJ-PQ-3eh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Registration View Controller-->
+        <scene sceneID="KKQ-PY-YRO">
+            <objects>
+                <viewController id="eWJ-PQ-3eh" customClass="RegistrationViewController" customModule="SimpleVideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Ee-zc-gTZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple Video App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWn-aB-XoK">
+                                <rect key="frame" x="50" y="64" width="314" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="g2c-yn-fB0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5RW-XM-UAo">
+                                <rect key="frame" x="0.0" y="129" width="414" height="210"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1s-FG-qZL" customClass="CustomInputPartsView" customModule="SimpleVideoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MgT-k5-MXR" customClass="CustomInputPartsView" customModule="SimpleVideoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="414" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMV-FV-s5J" customClass="CustomInputPartsView" customModule="SimpleVideoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140" width="414" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="EdT-A1-9lV"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjH-2e-jfx">
+                                <rect key="frame" x="50" y="349" width="314" height="30"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="会員登録">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionRegister:" destination="eWJ-PQ-3eh" eventType="touchUpInside" id="kcd-4S-8sQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5RW-XM-UAo" firstAttribute="leading" secondItem="ROw-1Y-Tg6" secondAttribute="leading" id="CK7-SX-jvz"/>
+                            <constraint firstItem="ROw-1Y-Tg6" firstAttribute="trailing" secondItem="tWn-aB-XoK" secondAttribute="trailing" constant="50" id="I9d-7N-t4e"/>
+                            <constraint firstItem="BjH-2e-jfx" firstAttribute="leading" secondItem="ROw-1Y-Tg6" secondAttribute="leading" constant="50" id="Vp0-2O-WV3"/>
+                            <constraint firstItem="tWn-aB-XoK" firstAttribute="leading" secondItem="ROw-1Y-Tg6" secondAttribute="leading" constant="50" id="hiX-Zf-Mbr"/>
+                            <constraint firstItem="ROw-1Y-Tg6" firstAttribute="trailing" secondItem="BjH-2e-jfx" secondAttribute="trailing" constant="50" id="ksu-oW-Bco"/>
+                            <constraint firstItem="BjH-2e-jfx" firstAttribute="top" secondItem="5RW-XM-UAo" secondAttribute="bottom" constant="10" id="qPv-m5-pdJ"/>
+                            <constraint firstItem="5RW-XM-UAo" firstAttribute="top" secondItem="tWn-aB-XoK" secondAttribute="bottom" constant="10" id="rmh-W8-ggf"/>
+                            <constraint firstItem="tWn-aB-XoK" firstAttribute="top" secondItem="ROw-1Y-Tg6" secondAttribute="top" constant="20" id="tiD-3h-Lfw"/>
+                            <constraint firstItem="5RW-XM-UAo" firstAttribute="trailing" secondItem="9Ee-zc-gTZ" secondAttribute="trailing" id="ySP-VH-9ti"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ROw-1Y-Tg6"/>
+                    </view>
+                    <connections>
+                        <outlet property="mailInputView" destination="L1s-FG-qZL" id="CML-Ku-AvU"/>
+                        <outlet property="passwordConfirmationView" destination="XMV-FV-s5J" id="CsR-dJ-8Qx"/>
+                        <outlet property="passwordInputView" destination="MgT-k5-MXR" id="GJq-1G-WJK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEf-mh-E7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="162.72321428571428"/>
+        </scene>
+    </scenes>
+</document>

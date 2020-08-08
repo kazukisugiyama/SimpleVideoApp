@@ -6,56 +6,64 @@
 //  Copyright © 2020 杉山和輝. All rights reserved.
 //
 
+import Firebase
 import UIKit
-import Rswift
+
+// MARK: - protocol
+
+protocol LoginViewControllerProtocol: BaseViewProtocol {
+    func showPurchasedVideo()
+    func showPasswordReissue()
+}
+
+// MARK: - class
 
 class LoginViewController: BaseViewController {
     
-    @IBOutlet weak var mailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var warningMailLabel: UILabel!
-    @IBOutlet weak var warningPasswordLabel: UILabel!
+    var presenter: LoginPresenterProtocol?
+    
+    @IBOutlet weak var mailInputView: CustomInputPartsView!
+    @IBOutlet weak var passwordInputView: CustomInputPartsView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initLabel()
+        //presenter?.setViewControllerProtocol(viewController: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     @IBAction func actionLogin(_ sender: Any) {
-        checkTextField(mail: mailTextField.text, password: passwordTextField.text)
-        // サーバへ通信する
-        // 結果がOKであればつPurchasedVideoに遷移
-        showPurchasedVideo()
+        print("actionLogin")
+
+        guard let mail = mailInputView.inputTextField.text,
+            let password = passwordInputView.inputTextField.text else { return }
+        mailInputView.actionCheckInputParts()
+        passwordInputView.actionCheckInputParts()
+        presenter?.doLogin(email: mail, password: password)
     }
     
     @IBAction func actionReissue(_ sender: Any) {
         // パスワード再発行画面へ遷移
-    }
-    
-    private func initLabel() {
-        warningMailLabel.isHidden = true
-        warningPasswordLabel.isHidden = true
-    }
-    
-    private func checkTextField(mail: String?, password: String?) {
-        guard let mail = mail, let password = password else {
-            return
-        }
+        presenter?.doPasswordReissue()
         
-        if mail == "" {
-            warningMailLabel.isHidden = false
-            warningMailLabel.text = "アドレスが未入力です"
-        } else {
-            warningMailLabel.isHidden = true
-        }
-        if password == "" {
-            warningPasswordLabel.isHidden = false
-            warningPasswordLabel.text = "パスワードが未入力です"
-        } else {
-            warningPasswordLabel.isHidden = true
-        }
-        //登録されていないアドレス、パスワードの場合エラーを返す
+        //TODO: tes
+        showPasswordReissue()
     }
     
 }
 
+// MARK: - extension
+
+extension LoginViewController: LoginViewControllerProtocol {
+    func showPurchasedVideo() {
+        let storyboard = R.storyboard.purchasedVideoBase()
+        showStoryBoard(storyboard)
+    }
+    
+    func showPasswordReissue() {
+        let storyboard = R.storyboard.passwordReissue()
+        showStoryBoard(storyboard)
+    }
+}

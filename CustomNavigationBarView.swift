@@ -47,6 +47,8 @@ class CustomNavigationBarView: BaseView {
         super.initView()
     }
     
+    // MARK: - IBAction
+    
     @IBAction func actionLeftButton(_ sender: Any) {
         // メニュー、戻るボタン
         delegate?.actionLeftButton()
@@ -62,7 +64,8 @@ class CustomNavigationBarView: BaseView {
         delegate?.actionRightButton2()
     }
     
-    // TODO: 重複処理になっているため改良の余地あり
+    // MARK: - private method
+    
     private func updateView() {
         switch headerType {
         case .purchased:
@@ -113,7 +116,6 @@ class CustomNavigationBarView: BaseView {
         case .player:
             titleNavigationItem.title = ""
             navigationBar.backgroundColor = UIColor.black
-            //navigationBar.tintColor = UIColor.white
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "arrow.left")
             rightButton1.isEnabled = false

@@ -21,14 +21,14 @@ class SlideMenuViewController: BaseViewController {
         super.viewDidLoad()
     }
     
-    // MARK: - IBAction
+// MARK: - IBAction
     
     @IBAction func actionPurchasedVideo(_ sender: Any) {
         guard !isShow(type: .purchasedVideo) else {
             closeSlideMenu()
             return
         }
-        showPurchasedVideo()
+        //showPurchasedVideo()
     }
     
     @IBAction func actionDownLoadedVideo(_ sender: Any) {
@@ -55,7 +55,7 @@ class SlideMenuViewController: BaseViewController {
         showSetting()
     }
     
-    // MARK: - private method
+// MARK: - private method
     
     private func showDownloadedVideo() {
         let storyboard = R.storyboard.downloadedVideoBase()

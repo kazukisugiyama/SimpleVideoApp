@@ -17,10 +17,20 @@
 		B729E94B24DC3FC100ACB551 /* MyListBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B729E94A24DC3FC100ACB551 /* MyListBaseViewController.swift */; };
 		B72F39C124DB4CC40005CD8E /* DownloadedVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F39C024DB4CC40005CD8E /* DownloadedVideoViewController.swift */; };
 		B72F39C324DB55190005CD8E /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F39C224DB55190005CD8E /* SlideMenuViewController.swift */; };
+		B74CE83424DE895A00167551 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B74CE83324DE895A00167551 /* GoogleService-Info.plist */; };
+		B75CB48924DEEDBB00400448 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CB48824DEEDBB00400448 /* RegistrationViewController.swift */; };
+		B75CB48B24DEEDD100400448 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75CB48A24DEEDD100400448 /* Registration.storyboard */; };
+		B75CB48D24DEEE0500400448 /* PasswordReissueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CB48C24DEEE0500400448 /* PasswordReissueViewController.swift */; };
+		B75CB48F24DEEE1F00400448 /* PasswordReissue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75CB48E24DEEE1F00400448 /* PasswordReissue.storyboard */; };
+		B75CB49124DEF08A00400448 /* CustomInputPartsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75CB49024DEF08A00400448 /* CustomInputPartsView.xib */; };
+		B75CB49324DEF14700400448 /* CustomInputPartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CB49224DEF14700400448 /* CustomInputPartsView.swift */; };
 		B75EAA6124DC9F0900DEB06F /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75EAA6024DC9F0900DEB06F /* VideoPlayer.storyboard */; };
 		B75EAA6324DC9F5900DEB06F /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EAA6224DC9F5900DEB06F /* VideoPlayerView.swift */; };
 		B75EAA6524DCA1F300DEB06F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EAA6424DCA1F300DEB06F /* VideoPlayerViewController.swift */; };
 		B75EAA6824DCAC5600DEB06F /* clip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B75EAA6724DCAC5600DEB06F /* clip.mp4 */; };
+		B762227124DDF6B40067BF20 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227024DDF6B40067BF20 /* FirebaseService.swift */; };
+		B762227324DDF9FC0067BF20 /* LoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227224DDF9FC0067BF20 /* LoginInfo.swift */; };
+		B762227524DDFA0B0067BF20 /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227424DDFA0B0067BF20 /* VideoInfo.swift */; };
 		B77C697A24D9BA0F00F25E4A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77C697924D9BA0F00F25E4A /* LoginPresenter.swift */; };
 		B782733C24D8812E005A2FD6 /* PurchasedVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782733B24D8812E005A2FD6 /* PurchasedVideo.storyboard */; };
 		B782733E24D88148005A2FD6 /* DownloadedVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782733D24D88148005A2FD6 /* DownloadedVideo.storyboard */; };
@@ -57,6 +67,8 @@
 		B79E8A5A24D8788F00923859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79E8A5824D8788F00923859 /* LaunchScreen.storyboard */; };
 		B7A2ADA924DAFEBD009B53C0 /* VideoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7A2ADA824DAFEBD009B53C0 /* VideoListTableViewCell.xib */; };
 		B7C00BC224DD3F2900BCDBCC /* clip2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B7C00BC124DD3F2900BCDBCC /* clip2.mp4 */; };
+		B7CD6CAF24DF177D00C37A5A /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD6CAE24DF177D00C37A5A /* RegistrationPresenter.swift */; };
+		B7CD6CB124DF189700C37A5A /* PasswordReissuePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD6CB024DF189600C37A5A /* PasswordReissuePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,10 +82,20 @@
 		B729E94A24DC3FC100ACB551 /* MyListBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListBaseViewController.swift; sourceTree = "<group>"; };
 		B72F39C024DB4CC40005CD8E /* DownloadedVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedVideoViewController.swift; sourceTree = "<group>"; };
 		B72F39C224DB55190005CD8E /* SlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
+		B74CE83324DE895A00167551 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B75CB48824DEEDBB00400448 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		B75CB48A24DEEDD100400448 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		B75CB48C24DEEE0500400448 /* PasswordReissueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordReissueViewController.swift; sourceTree = "<group>"; };
+		B75CB48E24DEEE1F00400448 /* PasswordReissue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordReissue.storyboard; sourceTree = "<group>"; };
+		B75CB49024DEF08A00400448 /* CustomInputPartsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInputPartsView.xib; sourceTree = "<group>"; };
+		B75CB49224DEF14700400448 /* CustomInputPartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputPartsView.swift; sourceTree = "<group>"; };
 		B75EAA6024DC9F0900DEB06F /* VideoPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
 		B75EAA6224DC9F5900DEB06F /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		B75EAA6424DCA1F300DEB06F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		B75EAA6724DCAC5600DEB06F /* clip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = clip.mp4; sourceTree = "<group>"; };
+		B762227024DDF6B40067BF20 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		B762227224DDF9FC0067BF20 /* LoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
+		B762227424DDFA0B0067BF20 /* VideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
 		B77C697924D9BA0F00F25E4A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		B782733B24D8812E005A2FD6 /* PurchasedVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PurchasedVideo.storyboard; sourceTree = "<group>"; };
 		B782733D24D88148005A2FD6 /* DownloadedVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DownloadedVideo.storyboard; sourceTree = "<group>"; };
@@ -112,6 +134,8 @@
 		B79E8A5B24D8788F00923859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7A2ADA824DAFEBD009B53C0 /* VideoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoListTableViewCell.xib; sourceTree = "<group>"; };
 		B7C00BC124DD3F2900BCDBCC /* clip2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = clip2.mp4; sourceTree = "<group>"; };
+		B7CD6CAE24DF177D00C37A5A /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		B7CD6CB024DF189600C37A5A /* PasswordReissuePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordReissuePresenter.swift; sourceTree = "<group>"; };
 		BBB13B2B6C9FAAABE0DA23B1 /* Pods_SimpleVideoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleVideoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA541419D3905C071916D5C7 /* Pods-SimpleVideoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleVideoApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleVideoApp/Pods-SimpleVideoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,7 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				B785CE6924D9C3B40036393B /* CommonPresenter.swift */,
+				B7CD6CAE24DF177D00C37A5A /* RegistrationPresenter.swift */,
 				B77C697924D9BA0F00F25E4A /* LoginPresenter.swift */,
+				B7CD6CB024DF189600C37A5A /* PasswordReissuePresenter.swift */,
 				B782734B24D88380005A2FD6 /* PurchasedVideoPresenter.swift */,
 				B782734D24D8838C005A2FD6 /* DownloadedVideoPresenter.swift */,
 				B782734F24D8839B005A2FD6 /* MyListPresenter.swift */,
@@ -163,6 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				B782735524D88422005A2FD6 /* LoginModel.swift */,
+				B762227224DDF9FC0067BF20 /* LoginInfo.swift */,
+				B762227424DDFA0B0067BF20 /* VideoInfo.swift */,
+				B762227024DDF6B40067BF20 /* FirebaseService.swift */,
 				B782735724D88434005A2FD6 /* PurchasedVideoModel.swift */,
 				B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */,
 				B782735B24D88455005A2FD6 /* MyListModel.swift */,
@@ -177,7 +206,9 @@
 			children = (
 				B782733A24D880E5005A2FD6 /* Storyboard */,
 				B785CE6B24D9C44E0036393B /* BaseViewController.swift */,
+				B75CB48824DEEDBB00400448 /* RegistrationViewController.swift */,
 				B79E8A5124D8788C00923859 /* LoginViewController.swift */,
+				B75CB48C24DEEE0500400448 /* PasswordReissueViewController.swift */,
 				B791312B24DA8C8600E0892A /* PurchasedVideoViewController.swift */,
 				B729E94224DC3EEE00ACB551 /* PurchasedVideoBaseViewController.swift */,
 				B72F39C024DB4CC40005CD8E /* DownloadedVideoViewController.swift */,
@@ -198,7 +229,9 @@
 		B782733A24D880E5005A2FD6 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				B75CB48A24DEEDD100400448 /* Registration.storyboard */,
 				B79E8A5324D8788C00923859 /* Login.storyboard */,
+				B75CB48E24DEEE1F00400448 /* PasswordReissue.storyboard */,
 				B782733B24D8812E005A2FD6 /* PurchasedVideo.storyboard */,
 				B729E94024DC3EB600ACB551 /* PurchasedVideoBase.storyboard */,
 				B782733D24D88148005A2FD6 /* DownloadedVideo.storyboard */,
@@ -219,6 +252,7 @@
 				B791313024DA9F9300E0892A /* xib */,
 				B791313B24DABA0C00E0892A /* BaseView.swift */,
 				B791313724DAA0CF00E0892A /* CustomNavigationBarView.swift */,
+				B75CB49224DEF14700400448 /* CustomInputPartsView.swift */,
 				B791313924DAA0F800E0892A /* VideoListTableViewCell.swift */,
 			);
 			name = View;
@@ -229,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				B791313124DA9FE500E0892A /* CustomNavigationBarView.xib */,
+				B75CB49024DEF08A00400448 /* CustomInputPartsView.xib */,
 				B7A2ADA824DAFEBD009B53C0 /* VideoListTableViewCell.xib */,
 			);
 			path = xib;
@@ -237,6 +272,7 @@
 		B79E8A4124D8788C00923859 = {
 			isa = PBXGroup;
 			children = (
+				B74CE83324DE895A00167551 /* GoogleService-Info.plist */,
 				B791312924DA861E00E0892A /* R.generated.swift */,
 				B79E8A4C24D8788C00923859 /* SimpleVideoApp */,
 				B79E8A4B24D8788C00923859 /* Products */,
@@ -334,6 +370,7 @@
 				B7C00BC224DD3F2900BCDBCC /* clip2.mp4 in Resources */,
 				B79E8A5524D8788C00923859 /* Login.storyboard in Resources */,
 				B782734224D88186005A2FD6 /* SearchVideo.storyboard in Resources */,
+				B75CB48F24DEEE1F00400448 /* PasswordReissue.storyboard in Resources */,
 				B79E8A5A24D8788F00923859 /* LaunchScreen.storyboard in Resources */,
 				B75EAA6124DC9F0900DEB06F /* VideoPlayer.storyboard in Resources */,
 				B782733E24D88148005A2FD6 /* DownloadedVideo.storyboard in Resources */,
@@ -341,11 +378,14 @@
 				B791312E24DA93F300E0892A /* SlideMenu.storyboard in Resources */,
 				B79E8A5724D8788F00923859 /* Assets.xcassets in Resources */,
 				B791313224DA9FE500E0892A /* CustomNavigationBarView.xib in Resources */,
+				B74CE83424DE895A00167551 /* GoogleService-Info.plist in Resources */,
 				B729E94124DC3EB600ACB551 /* PurchasedVideoBase.storyboard in Resources */,
 				B782733C24D8812E005A2FD6 /* PurchasedVideo.storyboard in Resources */,
+				B75CB49124DEF08A00400448 /* CustomInputPartsView.xib in Resources */,
 				B729E94524DC3F3200ACB551 /* MyListBase.storyboard in Resources */,
 				B7A2ADA924DAFEBD009B53C0 /* VideoListTableViewCell.xib in Resources */,
 				B782734424D881BC005A2FD6 /* Setting.storyboard in Resources */,
+				B75CB48B24DEEDD100400448 /* Registration.storyboard in Resources */,
 				B75EAA6824DCAC5600DEB06F /* clip.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,12 +466,15 @@
 				B782734624D88210005A2FD6 /* SearchVideoViewController.swift in Sources */,
 				B729E93D24DBEA9700ACB551 /* DownloadedVideoBaseViewController.swift in Sources */,
 				B791313A24DAA0F800E0892A /* VideoListTableViewCell.swift in Sources */,
+				B7CD6CAF24DF177D00C37A5A /* RegistrationPresenter.swift in Sources */,
 				B782735C24D88455005A2FD6 /* MyListModel.swift in Sources */,
 				B782734824D88225005A2FD6 /* SettingViewController.swift in Sources */,
 				B75EAA6324DC9F5900DEB06F /* VideoPlayerView.swift in Sources */,
 				B782735424D883B8005A2FD6 /* SettingPresenter.swift in Sources */,
 				B791313824DAA0D000E0892A /* CustomNavigationBarView.swift in Sources */,
 				B782735024D8839B005A2FD6 /* MyListPresenter.swift in Sources */,
+				B75CB49324DEF14700400448 /* CustomInputPartsView.swift in Sources */,
+				B762227124DDF6B40067BF20 /* FirebaseService.swift in Sources */,
 				B791312C24DA8C8600E0892A /* PurchasedVideoViewController.swift in Sources */,
 				B72F39C324DB55190005CD8E /* SlideMenuViewController.swift in Sources */,
 				B782735A24D88445005A2FD6 /* DownloadedVideoModel.swift in Sources */,
@@ -439,18 +482,23 @@
 				B729E94924DC3FA200ACB551 /* MyListViewController.swift in Sources */,
 				B791312A24DA861E00E0892A /* R.generated.swift in Sources */,
 				B782735624D88422005A2FD6 /* LoginModel.swift in Sources */,
+				B762227524DDFA0B0067BF20 /* VideoInfo.swift in Sources */,
 				B785CE6C24D9C44E0036393B /* BaseViewController.swift in Sources */,
 				B72F39C124DB4CC40005CD8E /* DownloadedVideoViewController.swift in Sources */,
 				B729E94B24DC3FC100ACB551 /* MyListBaseViewController.swift in Sources */,
 				B782735824D88434005A2FD6 /* PurchasedVideoModel.swift in Sources */,
 				B782735E24D88465005A2FD6 /* SearchVideoModel.swift in Sources */,
 				B729E94324DC3EEE00ACB551 /* PurchasedVideoBaseViewController.swift in Sources */,
+				B762227324DDF9FC0067BF20 /* LoginInfo.swift in Sources */,
 				B782734C24D88380005A2FD6 /* PurchasedVideoPresenter.swift in Sources */,
+				B75CB48924DEEDBB00400448 /* RegistrationViewController.swift in Sources */,
 				B782734E24D8838C005A2FD6 /* DownloadedVideoPresenter.swift in Sources */,
 				B79E8A5024D8788C00923859 /* SceneDelegate.swift in Sources */,
 				B75EAA6524DCA1F300DEB06F /* VideoPlayerViewController.swift in Sources */,
+				B7CD6CB124DF189700C37A5A /* PasswordReissuePresenter.swift in Sources */,
 				B785CE6A24D9C3B40036393B /* CommonPresenter.swift in Sources */,
 				B77C697A24D9BA0F00F25E4A /* LoginPresenter.swift in Sources */,
+				B75CB48D24DEEE0500400448 /* PasswordReissueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

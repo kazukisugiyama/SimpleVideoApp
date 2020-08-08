@@ -51,7 +51,7 @@ class SettingViewController: BaseViewController {
 extension SettingViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
         // 前画面へ戻る
-        showPurchasedVideo()
+        //showPurchasedVideo()
     }
 
     func actionRightButton1() {

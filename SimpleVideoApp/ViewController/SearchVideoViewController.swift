@@ -20,7 +20,7 @@ class SearchVideoViewController: BaseViewController {
 
 extension SearchVideoViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
-        showPurchasedVideo()
+        //showPurchasedVideo()
     }
     
     func actionRightButton1() {

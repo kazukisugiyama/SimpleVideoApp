@@ -79,12 +79,6 @@ extension PurchasedVideoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.videoListTableViewCell,for: indexPath) else {
-            return UITableViewCell()
-        }
-        cell.videoModel = testVideo[indexPath.row]
- */
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "VideoListTableViewCell2", for: indexPath) as? VideoListTableViewCell else {
             return UITableViewCell()
         }

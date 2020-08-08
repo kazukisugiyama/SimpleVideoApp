@@ -9,5 +9,9 @@ target 'SimpleVideoApp' do
 
 pod 'R.swift'
 pod 'SlideMenuControllerSwift'
+pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
 
 end

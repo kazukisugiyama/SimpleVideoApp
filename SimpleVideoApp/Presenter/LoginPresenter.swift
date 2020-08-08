@@ -9,10 +9,31 @@
 import UIKit
 
 protocol LoginPresenterProtocol: CommonPresenterProtocol {
-    
+    func setViewControllerProtocol(viewController: LoginViewControllerProtocol)
+    func doLogin(email: String, password: String)
+    func doPasswordReissue()
 }
 
-class LoginView: CommonPresenter {
-    // Cognitoログイン
-    // 動画再生画面を表示
+class LoginPresenter: CommonPresenter {
+    var firebaseService: FirebaseServiceProtocol?
+    var viewController: LoginViewControllerProtocol?
+}
+
+extension LoginPresenter: LoginPresenterProtocol {
+    func setViewControllerProtocol(viewController: LoginViewControllerProtocol) {
+        self.viewController = viewController
+    }
+    
+    func doLogin(email: String, password: String) {
+        NSLog("doLogin pr")
+        let succes = { () -> Void in
+            self.viewController?.showPurchasedVideo()
+        }
+        
+        firebaseService?.signIn(email: email, password: password, succes: succes)
+    }
+    
+    func doPasswordReissue() {
+        self.viewController?.showPasswordReissue()
+    }
 }

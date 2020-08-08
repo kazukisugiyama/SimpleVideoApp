@@ -7,4 +7,8 @@
 //
 
 import Foundation
+import Firebase
 
+class LoginModel {
+    
+}

@@ -11,7 +11,7 @@ import UIKit
 protocol BaseViewProtocol: AnyObject {
     func closeView()
     func showStoryBoard(_ storyboard: UIKit.UIStoryboard)
-    func showPurchasedVideo()
+    //func showPurchasedVideo()
 }
 
 class BaseViewController: UIViewController {
@@ -36,9 +36,11 @@ extension BaseViewController: BaseViewProtocol {
         }
     }
     
+    /*
     func showPurchasedVideo() {
         //let storyboard = R.storyboard.purchasedVideoBase()
         let storyboard = R.storyboard.videoPlayer()
         showStoryBoard(storyboard)
-    }    
+    }
+ */
 }
