@@ -20,7 +20,7 @@ protocol RegistrationViewControllerProtocol: BaseViewProtocol {
 
 class RegistrationViewController: BaseViewController {
     
-    var presenter: LoginPresenterProtocol?
+    var presenter: RegistrationPresenterProtocol?
 
     @IBOutlet weak var mailInputView: CustomInputPartsView!
     @IBOutlet weak var passwordInputView: CustomInputPartsView!
@@ -28,20 +28,19 @@ class RegistrationViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        //TODO: LoginViewController参照
+        presenter = RegistrationPresenter()
     }
     
     @IBAction func actionRegister(_ sender: Any) {
         guard let mail = mailInputView.inputTextField.text,
-            let password = passwordInputView.inputTextField.text,
-            let passwordConfirmation = passwordInputView.inputTextField.text else { return }
+            let password = passwordInputView.inputTextField.text else { return }
         
         mailInputView.actionCheckInputParts()
         passwordInputView.actionCheckInputParts()
         passwordConfirmationView.actionCheckInputParts()
-        //tes
-        showLogin()
-        //presenter?.doLogin(email: mail, password: password)
+
+        presenter?.doLogin(mail: mail, password: password)
     }
 }
 

@@ -10,6 +10,7 @@ import UIKit
 
 protocol CustomInputPartsViewDelegate: AnyObject {
     func actionCheckInputParts()
+    func indicationError()
 }
 
 class CustomInputPartsView: BaseView {
@@ -63,6 +64,20 @@ class CustomInputPartsView: BaseView {
             errorLabel.isHidden = true
         }
     }
+    
+    private func updateErrorLabel() {
+        switch inputType {
+        case .mail:
+            errorLabel.isHidden = false
+            errorLabel.text = "入力されたメールアドレスは登録されていません"
+        case .password:
+            errorLabel.isHidden = false
+            errorLabel.text = "入力されたパスワードは登録されていません"
+        case .passwordConfirmation:
+            break
+        }
+    }
+    
 }
 
 // MARK: - extension
@@ -70,5 +85,9 @@ class CustomInputPartsView: BaseView {
 extension CustomInputPartsView: CustomInputPartsViewDelegate {
     func actionCheckInputParts() {
         checkTextField()
+    }
+    
+    func indicationError() {
+        updateErrorLabel()
     }
 }

@@ -8,32 +8,46 @@
 
 import UIKit
 
+// MARK: - protocol
+
 protocol LoginPresenterProtocol: CommonPresenterProtocol {
-    func setViewControllerProtocol(viewController: LoginViewControllerProtocol)
-    func doLogin(email: String, password: String)
+    func doLogin(mail: String, password: String)
     func doPasswordReissue()
 }
+
+// MARK: - class
 
 class LoginPresenter: CommonPresenter {
     var firebaseService: FirebaseServiceProtocol?
     var viewController: LoginViewControllerProtocol?
+    
+    // TODO: 書き方
+    override init() {
+        firebaseService = FirebaseService()
+        viewController = LoginViewController()
+    }
 }
 
+// MARK: - extension
+
 extension LoginPresenter: LoginPresenterProtocol {
-    func setViewControllerProtocol(viewController: LoginViewControllerProtocol) {
-        self.viewController = viewController
-    }
-    
-    func doLogin(email: String, password: String) {
-        NSLog("doLogin pr")
+    func doLogin(mail: String, password: String) {
+        print("pr doLogin")
         let succes = { () -> Void in
+            print("pr succes")
             self.viewController?.showPurchasedVideo()
         }
         
-        firebaseService?.signIn(email: email, password: password, succes: succes)
+        let error = { () -> Void in
+            print("pr succes")
+            self.viewController?.indicationUnregisteredError()
+        }
+        
+        firebaseService?.signIn(email: mail, password: password, succes: succes, error: error)
     }
     
     func doPasswordReissue() {
+        print("pr doPasswordReissue")
         self.viewController?.showPasswordReissue()
     }
 }

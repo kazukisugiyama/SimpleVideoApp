@@ -11,7 +11,7 @@ import FirebaseAuth
 
 protocol FirebaseServiceProtocol {
     func memberRegistration(email: String, password: String, succes: @escaping () -> Void)
-    func signIn(email: String, password: String, succes: @escaping () -> Void)
+    func signIn(email: String, password: String, succes: @escaping () -> Void, error: @escaping () -> Void)
     func signOut()
     func passwordReset(email: String, succes: @escaping () -> Void)
 }
@@ -44,14 +44,15 @@ extension FirebaseService: FirebaseServiceProtocol {
         }
     }
 
-    func signIn(email: String, password: String, succes: @escaping () -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+    func signIn(email: String, password: String, succes: @escaping () -> Void, error: @escaping () -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, resultError in
             guard let self = self else { return }
-            if let error = error {
-                print("firebase signIn error : \(error)")
+            if let resultError = resultError {
+                print("firebase signIn error : \(resultError)")
+                error()
             } else {
+                print("succes : \(String(describing: result))")
                 succes()
-                self.getUserToken()
             }
         }
     }

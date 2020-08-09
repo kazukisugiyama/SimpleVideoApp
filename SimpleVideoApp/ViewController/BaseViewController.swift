@@ -32,7 +32,7 @@ extension BaseViewController: BaseViewProtocol {
         if let vc = storyboard.instantiateInitialViewController() {
             vc.modalPresentationStyle = .fullScreen
             guard let rootViewController = UIApplication.shared.keyWindow?.rootViewController else { return }
-            rootViewController.present(vc, animated: false, completion: nil)
+            rootViewController.present(vc, animated: true, completion: nil)
         }
     }
     

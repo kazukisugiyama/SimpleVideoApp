@@ -14,6 +14,7 @@ import UIKit
 protocol LoginViewControllerProtocol: BaseViewProtocol {
     func showPurchasedVideo()
     func showPasswordReissue()
+    func indicationUnregisteredError()
 }
 
 // MARK: - class
@@ -27,7 +28,10 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //presenter?.setViewControllerProtocol(viewController: self)
+        // TODO: インスタンスをviewDidLoadで入れることは正しい？
+        // サンプルを見ても明示的に行っていないので若干自信がない
+        // 循環参照云々で問題起きないか心配
+        presenter = LoginPresenter()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,21 +39,20 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func actionLogin(_ sender: Any) {
-        print("actionLogin")
+        print("vc actionLogin")
 
         guard let mail = mailInputView.inputTextField.text,
             let password = passwordInputView.inputTextField.text else { return }
         mailInputView.actionCheckInputParts()
         passwordInputView.actionCheckInputParts()
-        presenter?.doLogin(email: mail, password: password)
+        
+        presenter?.doLogin(mail: mail, password: password)
     }
     
     @IBAction func actionReissue(_ sender: Any) {
-        // パスワード再発行画面へ遷移
-        presenter?.doPasswordReissue()
+        print("vc actionLogin")
         
-        //TODO: tes
-        showPasswordReissue()
+        presenter?.doPasswordReissue()
     }
     
 }
@@ -65,5 +68,10 @@ extension LoginViewController: LoginViewControllerProtocol {
     func showPasswordReissue() {
         let storyboard = R.storyboard.passwordReissue()
         showStoryBoard(storyboard)
+    }
+    
+    func indicationUnregisteredError() {
+        // TODO: このタイミングでCustomViewを呼び出すとFatalError
+        print("error")
     }
 }

@@ -14,7 +14,7 @@ protocol PasswordReissueViewControllerProtocol: BaseViewProtocol {
     func sendCompletely()
 }
 
-// MARK: - protocol
+// MARK: - class
 
 class PasswordReissueViewController: BaseViewController {
     
@@ -26,6 +26,8 @@ class PasswordReissueViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         completedLabel.isHidden = true
+        // TODO: LoginViewController参照
+        presenter = PasswordReissuePresenter()
     }
     
     @IBAction func actionPasswordReissue(_ sender: Any) {
@@ -33,6 +35,8 @@ class PasswordReissueViewController: BaseViewController {
         
         mailInputView.actionCheckInputParts()
         completedLabel.isHidden = false
+        
+        presenter?.doReset(mail: mail)
     }
     
 }
