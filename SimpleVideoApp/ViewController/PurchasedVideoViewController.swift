@@ -31,14 +31,17 @@ class PurchasedVideoViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         header.delegate = self
-        
-        showStorageAllVideo()
-        
         tableView.delegate = self
         tableView.dataSource = self
         // Identifierの設定
         let nib = UINib(nibName: "VideoListTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "VideoListTableViewCell")
+        
+        showStorageAllVideo()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     @IBAction func actionSort(_ sender: Any) {
@@ -70,7 +73,7 @@ class PurchasedVideoViewController: BaseViewController {
 extension PurchasedVideoViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
         print("actionLeftButton")
-        // メニューの表示
+        // TODO: 他画面へ遷移し、当画面へ戻ったタイミングでスライドメニューが表示されない
         slideMenuController()?.openLeft()
     }
     
@@ -80,6 +83,8 @@ extension PurchasedVideoViewController: CustomNavigationBarViewDelegate {
     
     func actionRightButton2() {
         // 更新
+        // TODO: 増え続けてしまう
+        showStorageAllVideo()
     }
 }
 

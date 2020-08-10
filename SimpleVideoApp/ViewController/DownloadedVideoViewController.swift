@@ -83,6 +83,7 @@ extension DownloadedVideoViewController: CustomNavigationBarViewDelegate {
     
     func actionRightButton2() {
         // 更新ボタン
+        showAllVideo()
     }
 }
 

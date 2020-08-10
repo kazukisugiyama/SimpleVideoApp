@@ -339,6 +339,12 @@ PODS:
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
+  - Reachability (3.2)
+  - Realm (5.3.3):
+    - Realm/Headers (= 5.3.3)
+  - Realm/Headers (5.3.3)
+  - RealmSwift (5.3.3):
+    - Realm (= 5.3.3)
   - SlideMenuControllerSwift (4.0.0)
 
 DEPENDENCIES:
@@ -348,6 +354,8 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - R.swift
+  - Reachability
+  - RealmSwift
   - SlideMenuControllerSwift
 
 SPEC REPOS:
@@ -373,6 +381,9 @@ SPEC REPOS:
     - PromisesObjC
     - R.swift
     - R.swift.Library
+    - Reachability
+    - Realm
+    - RealmSwift
     - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
@@ -397,8 +408,11 @@ SPEC CHECKSUMS:
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  Realm: 2d57ea355bf8ca2a0964d6bfb38d28d7ff2addf6
+  RealmSwift: 0a709536ecea30eea1d3c514f6ade2ed078dee3c
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
 
-PODFILE CHECKSUM: 6cfa6874e218993bcef559a9998a5447db886581
+PODFILE CHECKSUM: 78bca9bebb1255eab463f710fec1efad39219fd2
 
 COCOAPODS: 1.9.3

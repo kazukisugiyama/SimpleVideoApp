@@ -14,5 +14,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
+pod 'Reachability'
+pod 'RealmSwift'
 
 end

@@ -17,12 +17,9 @@ protocol FirebaseStorageServiceProtocol {
 
 class FirebaseStorageService {
     
-    private let url = "gs://simplevideoapp-17ce7.appspot.com"
-    private let url2 = "gs://simplevideoapp-17ce7.appspot.com/"
-    
     func downLoadForFirebaseStorage(fileName: String) {
         // Storageは1箇所に集約されるので固定値で問題ない想定
-        let videoRef = Storage.storage().reference(forURL: url).child(fileName)
+        let videoRef = Storage.storage().reference(forURL: Constant.STORAGE_URL).child(fileName)
         videoRef.getData(maxSize: INT64_MAX) { (data, error) in
             if let error = error {
                 print("getData error: \(error)")
@@ -41,7 +38,7 @@ class FirebaseStorageService {
     }
     
     func tes2() {
-        let ref = Storage.storage().reference(forURL: url)
+        let ref = Storage.storage().reference(forURL: Constant.STORAGE_URL)
         ref.listAll { (result, error) in
             if let error = error {
                 print("listAll error: \(error)")
@@ -50,7 +47,7 @@ class FirebaseStorageService {
                 let items = result.items
                 for item in items {
                     var data = item.description
-                    guard let range2 = self.url2.range(of: self.url2) else { return }
+                    guard let range2 = Constant.STORAGE_URL_ADD_SLASH.range(of: Constant.STORAGE_URL_ADD_SLASH) else { return }
                     data.replaceSubrange(range2, with: "")
                     datas.append(data)
                 }
@@ -67,7 +64,7 @@ extension FirebaseStorageService: FirebaseStorageServiceProtocol {
     }
     
     func displayStorageAllVideo(succes: @escaping (_ item: String) -> Void) {
-        let ref = Storage.storage().reference(forURL: self.url)
+        let ref = Storage.storage().reference(forURL: Constant.STORAGE_URL)
         ref.listAll { (result, error) in
             if let error = error {
                 print("listAll error: \(error)")
@@ -76,7 +73,7 @@ extension FirebaseStorageService: FirebaseStorageServiceProtocol {
                 print("items : \(items)")
                 for item in items {
                     var data = item.description
-                    guard let range2 = self.url2.range(of: self.url2) else { return }
+                    guard let range2 = Constant.STORAGE_URL_ADD_SLASH.range(of: Constant.STORAGE_URL_ADD_SLASH) else { return }
                     data.replaceSubrange(range2, with: "")
                     succes(data)
                 }

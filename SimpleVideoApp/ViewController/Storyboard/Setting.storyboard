@@ -150,7 +150,9 @@
                         <viewLayoutGuide key="safeArea" id="tGr-iZ-I4j"/>
                     </view>
                     <connections>
+                        <outlet property="downloadSettingSwitch" destination="6Mb-mb-SQL" id="9Vw-S8-Fqw"/>
                         <outlet property="header" destination="T4J-5k-5yO" id="75z-nX-Oq2"/>
+                        <outlet property="streamingSettingSwitch" destination="hvZ-Nx-9iu" id="N9m-ax-h65"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skU-AW-p2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

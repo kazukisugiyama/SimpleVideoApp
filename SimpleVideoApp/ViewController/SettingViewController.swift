@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import Reachability
 
 class SettingViewController: BaseViewController {
     
+    let entity = WiFiSettingEntity()
+    
     @IBOutlet weak var header: CustomNavigationBarView!
-
+    @IBOutlet weak var streamingSettingSwitch: UISwitch!
+    @IBOutlet weak var downloadSettingSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         header.delegate = self
+        streamingSettingSwitch.isOn = entity.streamWiFiOnly
+        downloadSettingSwitch.isOn = entity.downloadWiFiOnly
     }
     
     @IBAction func actionLogout(_ sender: Any) {
@@ -23,23 +30,15 @@ class SettingViewController: BaseViewController {
     }
     
     @IBAction func actionIsWiFiOnlyStreaming(_ sender: UISwitch) {
-        if sender.isOn {
-            // wi-fiの接続状態を検知するメソッドを呼び出す
-            // https://dev.classmethod.jp/articles/ios-reachability/
-            // ダウンロードを行えるようにする
-        } else {
-            // ダウンロードを行えないように修正
-        }
+        print("stream isOn : \(sender.isOn)")
+        entity.writeStreamSetting(isValid: sender.isOn)
+        print("stream entity : \(entity.streamWiFiOnly)")
     }
     
     @IBAction func actionIsWiFiOnlyDownload(_ sender: UISwitch) {
-        if sender.isOn {
-            // wi-fiの接続状態を検知するメソッドを呼び出す
-            // https://dev.classmethod.jp/articles/ios-reachability/
-            // ダウンロードを行えるようにする
-        } else {
-            // ダウンロードを行えないように修正
-        }
+        print("download isOn : \(sender.isOn)")
+        entity.writeDownloadSetting(isValid: sender.isOn)
+        print("stream entity : \(entity.downloadWiFiOnly)")
     }
     
     private func showLogin() {
@@ -51,12 +50,10 @@ class SettingViewController: BaseViewController {
         let storyboard = R.storyboard.purchasedVideo()
         showStoryBoard(storyboard)
     }
-    
 }
 
 extension SettingViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
-        // 前画面へ戻る
         showPurchasedVideo()
     }
 

@@ -17,6 +17,7 @@ class VideoListTableViewCell: UITableViewCell {
     var delegate: VideoListTableViewCellDelegate?
     // TODO: presenterで取り扱うべき
     var firebaseStorageService: FirebaseStorageServiceProtocol?
+    var networkStatusService: NetworkStatusServiceProtocol?
     
     @IBOutlet private weak var titleLabel: UILabel!
     
@@ -49,7 +50,11 @@ extension VideoListTableViewCell: VideoListTableViewCellDelegate {
     func downloadVideo(fileName: String) {
         print("downloadVideo()")
         // TODO: presenterで取り扱うべき
-        firebaseStorageService = FirebaseStorageService()
-        firebaseStorageService?.downLoadVideo(fileName: fileName)
+        let succes = { () -> Void in
+            self.firebaseStorageService = FirebaseStorageService()
+            self.firebaseStorageService?.downLoadVideo(fileName: fileName)
+        }
+        networkStatusService = NetworkStatusService()
+        networkStatusService?.downLoadVideo(succes: succes, isDownload: true)
     }
 }
