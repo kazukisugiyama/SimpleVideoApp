@@ -8,24 +8,21 @@
 
 import UIKit
 import Rswift
+import FirebaseStorage
 
-struct VideoModel {
-    let title: String
-    
-    init(title: String) {
-        self.title = title
-    }
+// MARK: - protocol
+
+protocol PurchasedVideoViewControllerProtocol: BaseViewProtocol {
+    //func testes(items: [StorageReference])
 }
+
+// MARK: - class
 
 class PurchasedVideoViewController: BaseViewController {
     
-    // testデータ
-    // 後ほどモデルに移す
-    private let testVideo: [VideoModel] = [
-        VideoModel(title: "それいけアンパンマン"),
-        VideoModel(title: "ドラえもん"),
-        VideoModel(title: "クレヨンしんちゃん")
-    ]
+    private var presenter: PurchasedVideoPresenterProtocol?
+    private var model: FirebaseStorageServiceProtocol?
+    private var testVideo: [VideoInfo] = []
     
     @IBOutlet weak var header: CustomNavigationBarView!
     @IBOutlet weak var tableView: UITableView!
@@ -34,11 +31,14 @@ class PurchasedVideoViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         header.delegate = self
+        
+        showStorageAllVideo()
+        
         tableView.delegate = self
         tableView.dataSource = self
         // Identifierの設定
         let nib = UINib(nibName: "VideoListTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "VideoListTableViewCell2")
+        tableView.register(nib, forCellReuseIdentifier: "VideoListTableViewCell")
     }
     
     @IBAction func actionSort(_ sender: Any) {
@@ -49,10 +49,27 @@ class PurchasedVideoViewController: BaseViewController {
             sortButton.title = "購入日が新しい順"
         }
     }
+    
+    private func showStorageAllVideo() {
+        // TODO: コールバックを受け取り描画を行っているため表示が若干遅い
+        let succes = { (item: String) -> Void in
+            self.testVideo.append(VideoInfo(title: item))
+            DispatchQueue.main.async {
+                print("reloadData")
+                self.tableView.reloadData()
+            }
+        }
+        model = FirebaseStorageService()
+        model?.displayStorageAllVideo(succes: succes)
+    }
+    
 }
+
+// MARK: - extension
 
 extension PurchasedVideoViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
+        print("actionLeftButton")
         // メニューの表示
         slideMenuController()?.openLeft()
     }
@@ -66,7 +83,6 @@ extension PurchasedVideoViewController: CustomNavigationBarViewDelegate {
     }
 }
 
-// tableViewの何それ
 extension PurchasedVideoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -79,12 +95,11 @@ extension PurchasedVideoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "VideoListTableViewCell2", for: indexPath) as? VideoListTableViewCell else {
+        print("cellForRowAt")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "VideoListTableViewCell", for: indexPath) as? VideoListTableViewCell else {
             return UITableViewCell()
         }
         cell.videoModel = testVideo[indexPath.row]
         return cell
     }
-    
-    
 }

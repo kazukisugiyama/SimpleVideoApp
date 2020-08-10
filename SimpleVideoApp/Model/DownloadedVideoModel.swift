@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+protocol DownloadedVideoModelProtocol {
+    func downLoadVideo()
+}
+
+class DownloadedVideoModel {
+    func searchVideoList() {
+        print("searchVideoList")
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        do {
+            let content = try FileManager.default.contentsOfDirectory(atPath: path)
+            print("content : \(String(describing: content))")
+        } catch {
+            print("error")
+        }
+    }
+}
+
+extension DownloadedVideoModel: DownloadedVideoModelProtocol {
+    func downLoadVideo() {
+        searchVideoList()
+    }
+}
+

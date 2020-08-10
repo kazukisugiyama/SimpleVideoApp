@@ -31,6 +31,7 @@
 		B762227124DDF6B40067BF20 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227024DDF6B40067BF20 /* FirebaseService.swift */; };
 		B762227324DDF9FC0067BF20 /* LoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227224DDF9FC0067BF20 /* LoginInfo.swift */; };
 		B762227524DDFA0B0067BF20 /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227424DDFA0B0067BF20 /* VideoInfo.swift */; };
+		B77330F824DF919D0035902B /* FirebaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77330F724DF919D0035902B /* FirebaseStorageService.swift */; };
 		B77C697A24D9BA0F00F25E4A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77C697924D9BA0F00F25E4A /* LoginPresenter.swift */; };
 		B782733C24D8812E005A2FD6 /* PurchasedVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782733B24D8812E005A2FD6 /* PurchasedVideo.storyboard */; };
 		B782733E24D88148005A2FD6 /* DownloadedVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782733D24D88148005A2FD6 /* DownloadedVideo.storyboard */; };
@@ -96,6 +97,7 @@
 		B762227024DDF6B40067BF20 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		B762227224DDF9FC0067BF20 /* LoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
 		B762227424DDFA0B0067BF20 /* VideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
+		B77330F724DF919D0035902B /* FirebaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageService.swift; sourceTree = "<group>"; };
 		B77C697924D9BA0F00F25E4A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		B782733B24D8812E005A2FD6 /* PurchasedVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PurchasedVideo.storyboard; sourceTree = "<group>"; };
 		B782733D24D88148005A2FD6 /* DownloadedVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DownloadedVideo.storyboard; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				B762227224DDF9FC0067BF20 /* LoginInfo.swift */,
 				B762227424DDFA0B0067BF20 /* VideoInfo.swift */,
 				B762227024DDF6B40067BF20 /* FirebaseService.swift */,
+				B77330F724DF919D0035902B /* FirebaseStorageService.swift */,
 				B782735724D88434005A2FD6 /* PurchasedVideoModel.swift */,
 				B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */,
 				B782735B24D88455005A2FD6 /* MyListModel.swift */,
@@ -469,6 +472,7 @@
 				B7CD6CAF24DF177D00C37A5A /* RegistrationPresenter.swift in Sources */,
 				B782735C24D88455005A2FD6 /* MyListModel.swift in Sources */,
 				B782734824D88225005A2FD6 /* SettingViewController.swift in Sources */,
+				B77330F824DF919D0035902B /* FirebaseStorageService.swift in Sources */,
 				B75EAA6324DC9F5900DEB06F /* VideoPlayerView.swift in Sources */,
 				B782735424D883B8005A2FD6 /* SettingPresenter.swift in Sources */,
 				B791313824DAA0D000E0892A /* CustomNavigationBarView.swift in Sources */,

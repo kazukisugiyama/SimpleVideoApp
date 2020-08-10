@@ -46,12 +46,18 @@ class SettingViewController: BaseViewController {
         let storyboard = R.storyboard.login()
         showStoryBoard(storyboard)
     }
+    
+    private func showPurchasedVideo() {
+        let storyboard = R.storyboard.purchasedVideo()
+        showStoryBoard(storyboard)
+    }
+    
 }
 
 extension SettingViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
         // 前画面へ戻る
-        //showPurchasedVideo()
+        showPurchasedVideo()
     }
 
     func actionRightButton1() {

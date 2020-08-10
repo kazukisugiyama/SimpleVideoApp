@@ -28,7 +28,7 @@ class SlideMenuViewController: BaseViewController {
             closeSlideMenu()
             return
         }
-        //showPurchasedVideo()
+        showPurchasedVideo()
     }
     
     @IBAction func actionDownLoadedVideo(_ sender: Any) {
@@ -56,6 +56,11 @@ class SlideMenuViewController: BaseViewController {
     }
     
 // MARK: - private method
+    
+    private func showPurchasedVideo() {
+        let storyboard = R.storyboard.purchasedVideo()
+        showStoryBoard(storyboard)
+    }
     
     private func showDownloadedVideo() {
         let storyboard = R.storyboard.downloadedVideoBase()

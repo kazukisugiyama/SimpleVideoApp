@@ -231,6 +231,9 @@ PODS:
   - Firebase/Firestore (6.29.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 1.16.3)
+  - Firebase/Storage (6.29.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 3.8.0)
   - FirebaseAnalytics (6.7.0):
     - FirebaseCore (~> 6.8)
     - FirebaseInstallations (~> 1.4)
@@ -271,6 +274,9 @@ PODS:
     - GoogleUtilities/Environment (~> 6.7)
     - GoogleUtilities/UserDefaults (~> 6.7)
     - PromisesObjC (~> 1.2)
+  - FirebaseStorage (3.8.0):
+    - FirebaseCore (~> 6.8)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleAppMeasurement (6.7.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
     - GoogleUtilities/MethodSwizzler (~> 6.7)
@@ -340,6 +346,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - Firebase/Storage
   - R.swift
   - SlideMenuControllerSwift
 
@@ -354,6 +361,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseFirestore
     - FirebaseInstallations
+    - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
@@ -377,6 +385,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 7535fe695737f8c5b350584292a70b7f8ff0357b
   FirebaseFirestore: 5ea7b0878363f9ec66bdcee0c29ad875d1b511ac
   FirebaseInstallations: 3c520c951305cbf9ca54eb891ff9e6d1fd384881
+  FirebaseStorage: 3ef81ca5fa7817f85451ca09d516a34d2c7542a7
   GoogleAppMeasurement: 345d365fd105e6682bf5084783a5352a3db26820
   GoogleDataTransport: af0c79193dc59acd37630b4833d0dc6912ae6bd5
   GoogleUtilities: e121a3867449ce16b0e35ddf1797ea7a389ffdf2
@@ -390,6 +399,6 @@ SPEC CHECKSUMS:
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
 
-PODFILE CHECKSUM: 8751360397805d058f5191bdec19bec20cfa42a6
+PODFILE CHECKSUM: 6cfa6874e218993bcef559a9998a5447db886581
 
 COCOAPODS: 1.9.3

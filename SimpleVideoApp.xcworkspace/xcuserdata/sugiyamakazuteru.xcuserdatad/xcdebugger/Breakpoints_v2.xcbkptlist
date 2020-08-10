@@ -105,10 +105,10 @@
             filePath = "SimpleVideoApp/ViewController/PurchasedVideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "PurchasedVideoViewController"
-            landmarkType = "3">
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "actionSort(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -121,10 +121,10 @@
             filePath = "SimpleVideoApp/ViewController/DownloadedVideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "DownloadedVideoViewController"
-            landmarkType = "3">
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -139,7 +139,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
-            landmarkName = "showMyList()"
+            landmarkName = "showDownloadedVideo()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -153,9 +153,9 @@
             filePath = "SimpleVideoApp/ViewController/VideoPlayerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "updateSlider()"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "changePosition(time:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

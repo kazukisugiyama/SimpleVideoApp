@@ -11,12 +11,16 @@ import AVKit
 import MediaPlayer
 import UIKit
 
+// MARK: - class
+
 class VideoPlayerViewController: BaseViewController {
     
     let timeScale = CMTimeScale(NSEC_PER_SEC)
     var asset: AVAsset?
     var currentTime: CMTime?
     var cuurentRate: Float = 0
+    var fileName: String = ""
+    var filePath: String = ""
     
     @IBOutlet weak var playerView: VideoPlayerView!
     @IBOutlet weak var slider: UISlider!
@@ -81,7 +85,8 @@ class VideoPlayerViewController: BaseViewController {
     
     private func setupPlayer() {
         playerView.player = player
-        replacePlayerItem(fileName: "clip2", fileExtension: "mp4")
+        // Presenterから取得する
+        replacePlayerItem(filePath: filePath, fileExtension: "mp4")
         addPeriodicTimeObserver()
         addBoundaryTimeObserver()
         player.play()
@@ -98,8 +103,6 @@ class VideoPlayerViewController: BaseViewController {
             DispatchQueue.main.async {
                 print("update timer:\(CMTimeGetSeconds(time))")
                 self?.updateSlider()
-                print("addPeriodicTimeObserver request")
-                print(self?.player.rate)
             }
         }
         print("addPeriodicTimeObserver after")
@@ -118,11 +121,12 @@ class VideoPlayerViewController: BaseViewController {
         }
     }
     
-    private func replacePlayerItem(fileName: String, fileExtension: String) {
-        guard let url = Bundle.main.url(forResource: fileName, withExtension: fileExtension) else {
+    private func replacePlayerItem(filePath: String, fileExtension: String) {
+        guard let url = URL(string: filePath) else {
             print("url is nil")
             return
         }
+        print("url : \(url)")
         
         asset = AVAsset(url: url)
         guard let duration = asset?.duration else {
@@ -210,4 +214,26 @@ class VideoPlayerViewController: BaseViewController {
         }
     }
     
+    private func showPurchasedVideo() {
+        let storyboard = R.storyboard.purchasedVideo()
+        showStoryBoard(storyboard)
+    }
+    
+}
+
+extension VideoPlayerViewController: CustomNavigationBarViewDelegate {
+    func actionLeftButton() {
+        // 前画面へ戻る
+        showPurchasedVideo()
+    }
+
+    func actionRightButton1() {
+        // 処理なし
+        return
+    }
+    
+    func actionRightButton2() {
+        // 処理なし
+        return
+    }
 }

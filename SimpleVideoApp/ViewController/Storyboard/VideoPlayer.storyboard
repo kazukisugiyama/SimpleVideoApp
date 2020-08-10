@@ -10,7 +10,7 @@
         <!--Video Player View Controller-->
         <scene sceneID="gSg-zL-JRd">
             <objects>
-                <viewController id="fcx-MT-2ng" customClass="VideoPlayerViewController" customModule="SimpleVideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoPlayerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fcx-MT-2ng" customClass="VideoPlayerViewController" customModule="SimpleVideoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iI1-Rm-jYk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

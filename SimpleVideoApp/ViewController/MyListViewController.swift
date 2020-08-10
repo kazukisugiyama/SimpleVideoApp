@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - class
+
 class MyListViewController: BaseViewController {
     
     @IBOutlet weak var header: CustomNavigationBarView!
@@ -18,6 +20,8 @@ class MyListViewController: BaseViewController {
     }
 
 }
+
+// MARK: - extension
 
 extension MyListViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {

@@ -9,13 +9,12 @@
 import Foundation
 
 struct VideoInfo {
-    let videoID: String
     let videoTitle: String
-    let purchaseData: Data
+    let filePath: String
 
-    init(data: [String: Any]) {
-        videoID = data["videoID"] as! String
-        videoTitle = data["videoTitle"] as! String
-        purchaseData = data["purchaseData"] as! Data
+    init(title: String) {
+        videoTitle = title
+        // ローカルの保管場所は変化しない想定
+        filePath = "file://" + NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     }
 }

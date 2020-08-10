@@ -52,6 +52,7 @@ class CustomNavigationBarView: BaseView {
     @IBAction func actionLeftButton(_ sender: Any) {
         // メニュー、戻るボタン
         delegate?.actionLeftButton()
+        print("IBAction actionLeftButton")
     }
     
     @IBAction func actionRightButton1(_ sender: Any) {
