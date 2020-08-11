@@ -37,7 +37,7 @@ class PurchasedVideoViewController: BaseViewController {
         let nib = UINib(nibName: "VideoListTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "VideoListTableViewCell")
         
-        showStorageAllVideo()
+        showStorageAllVideo(isSync: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,12 +53,18 @@ class PurchasedVideoViewController: BaseViewController {
         }
     }
     
-    private func showStorageAllVideo() {
-        // TODO: コールバックを受け取り描画を行っているため表示が若干遅い
+    private func showStorageAllVideo(isSync: Bool) {
         let succes = { (item: String) -> Void in
+            if (isSync) {
+                var titles: [String] = []
+                for title in self.testVideo {
+                    titles.append(title.videoTitle)
+                }
+                guard !titles.contains(item) else { return }
+            }
+            
             self.testVideo.append(VideoInfo(title: item))
             DispatchQueue.main.async {
-                print("reloadData")
                 self.tableView.reloadData()
             }
         }
@@ -77,8 +83,6 @@ class PurchasedVideoViewController: BaseViewController {
 
 extension PurchasedVideoViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
-        print("actionLeftButton")
-        // TODO: 他画面へ遷移し、当画面へ戻ったタイミングでスライドメニューが表示されない
         slideMenuController()?.openLeft()
     }
     
@@ -87,9 +91,7 @@ extension PurchasedVideoViewController: CustomNavigationBarViewDelegate {
     }
     
     func actionRightButton2() {
-        // 更新
-        // TODO: 増え続けてしまう
-        showStorageAllVideo()
+        showStorageAllVideo(isSync: true)
     }
 }
 
@@ -105,7 +107,6 @@ extension PurchasedVideoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("cellForRowAt")
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "VideoListTableViewCell", for: indexPath) as? VideoListTableViewCell else {
             return UITableViewCell()
         }
