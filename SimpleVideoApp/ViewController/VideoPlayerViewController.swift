@@ -215,7 +215,7 @@ class VideoPlayerViewController: BaseViewController {
     }
     
     private func showPurchasedVideo() {
-        let storyboard = R.storyboard.purchasedVideo()
+        let storyboard = R.storyboard.purchasedVideoBase()
         showStoryBoard(storyboard)
     }
     

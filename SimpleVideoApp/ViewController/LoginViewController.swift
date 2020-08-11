@@ -39,8 +39,6 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func actionLogin(_ sender: Any) {
-        print("vc actionLogin")
-
         guard let mail = mailInputView.inputTextField.text,
             let password = passwordInputView.inputTextField.text else { return }
         mailInputView.actionCheckInputParts()
@@ -50,8 +48,6 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func actionReissue(_ sender: Any) {
-        print("vc actionLogin")
-        
         presenter?.doPasswordReissue()
     }
     

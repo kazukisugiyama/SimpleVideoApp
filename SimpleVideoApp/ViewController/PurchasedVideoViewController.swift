@@ -66,6 +66,11 @@ class PurchasedVideoViewController: BaseViewController {
         model?.displayStorageAllVideo(succes: succes)
     }
     
+    private func showDownloadedVideo() {
+        let storyboard = R.storyboard.downloadedVideoBase()
+        showStoryBoard(storyboard)
+    }
+    
 }
 
 // MARK: - extension
