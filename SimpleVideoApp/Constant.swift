@@ -19,5 +19,9 @@ class Constant{
     static let STORAGE_URL = "gs://simplevideoapp-17ce7.appspot.com"
     static let STORAGE_URL_ADD_SLASH = "gs://simplevideoapp-17ce7.appspot.com/"
     static let LOCAL_DOCUMENTS_URL = "file://" + NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+    
+    // MARK: - Display Parts
+    static let PURCHASE_DATE_NEW_ORDER = "購入日が新しい順"
+    static let PURCHASE_DATE_OLD_ORDER = "購入日が古い順"
 }
 

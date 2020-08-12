@@ -10,7 +10,7 @@ import UIKit
 import Reachability
 
 class SettingViewController: BaseViewController {
-    
+
     let entity = WiFiSettingEntity()
     
     @IBOutlet weak var header: CustomNavigationBarView!
@@ -20,25 +20,31 @@ class SettingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         header.delegate = self
-        streamingSettingSwitch.isOn = entity.streamWiFiOnly
-        downloadSettingSwitch.isOn = entity.downloadWiFiOnly
+        readSettingForRealm()
     }
     
     @IBAction func actionLogout(_ sender: Any) {
-        // ログアウト状態にして、ログイン画面に遷移させる
+        let firebaseService = FirebaseService()
+        firebaseService.signOut()
         showLogin()
     }
     
     @IBAction func actionIsWiFiOnlyStreaming(_ sender: UISwitch) {
-        print("stream isOn : \(sender.isOn)")
         entity.writeStreamSetting(isValid: sender.isOn)
-        print("stream entity : \(entity.streamWiFiOnly)")
     }
     
     @IBAction func actionIsWiFiOnlyDownload(_ sender: UISwitch) {
-        print("download isOn : \(sender.isOn)")
         entity.writeDownloadSetting(isValid: sender.isOn)
-        print("stream entity : \(entity.downloadWiFiOnly)")
+    }
+    
+    private func readSettingForRealm() {
+        let succes = { (isStreamOnly: Bool, isDownloadOnly: Bool) -> Void in
+            self.streamingSettingSwitch.isOn = isStreamOnly
+            self.downloadSettingSwitch.isOn = isDownloadOnly
+        }
+        // initは初期表示時のみ動作（Realmオブジェクトの追加を行う）
+        entity.initEntity()
+        entity.readEntity(succes: succes)
     }
     
     private func showLogin() {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02ADE1DA7A497DCA4CD129E2 /* Pods_SimpleVideoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB13B2B6C9FAAABE0DA23B1 /* Pods_SimpleVideoApp.framework */; };
+		B704519F24E298CE00EFFD71 /* VideoInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B704519E24E298CE00EFFD71 /* VideoInfoEntity.swift */; };
 		B729E93D24DBEA9700ACB551 /* DownloadedVideoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B729E93C24DBEA9700ACB551 /* DownloadedVideoBaseViewController.swift */; };
 		B729E93F24DBEC5C00ACB551 /* DownloadedVideoBase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B729E93E24DBEC5C00ACB551 /* DownloadedVideoBase.storyboard */; };
 		B729E94124DC3EB600ACB551 /* PurchasedVideoBase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B729E94024DC3EB600ACB551 /* PurchasedVideoBase.storyboard */; };
@@ -46,12 +47,7 @@
 		B782735024D8839B005A2FD6 /* MyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782734F24D8839B005A2FD6 /* MyListPresenter.swift */; };
 		B782735224D883AB005A2FD6 /* SearchVideoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735124D883AB005A2FD6 /* SearchVideoPresenter.swift */; };
 		B782735424D883B8005A2FD6 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735324D883B8005A2FD6 /* SettingPresenter.swift */; };
-		B782735624D88422005A2FD6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735524D88422005A2FD6 /* LoginModel.swift */; };
-		B782735824D88434005A2FD6 /* PurchasedVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735724D88434005A2FD6 /* PurchasedVideoModel.swift */; };
 		B782735A24D88445005A2FD6 /* DownloadedVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */; };
-		B782735C24D88455005A2FD6 /* MyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735B24D88455005A2FD6 /* MyListModel.swift */; };
-		B782735E24D88465005A2FD6 /* SearchVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735D24D88465005A2FD6 /* SearchVideoModel.swift */; };
-		B782736024D88474005A2FD6 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735F24D88474005A2FD6 /* SettingModel.swift */; };
 		B785CE6A24D9C3B40036393B /* CommonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B785CE6924D9C3B40036393B /* CommonPresenter.swift */; };
 		B785CE6C24D9C44E0036393B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B785CE6B24D9C44E0036393B /* BaseViewController.swift */; };
 		B791312A24DA861E00E0892A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791312924DA861E00E0892A /* R.generated.swift */; };
@@ -77,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		8F3B7AE048029E371A96A30C /* Pods-SimpleVideoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleVideoApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleVideoApp/Pods-SimpleVideoApp.release.xcconfig"; sourceTree = "<group>"; };
+		B704519E24E298CE00EFFD71 /* VideoInfoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfoEntity.swift; sourceTree = "<group>"; };
 		B729E93C24DBEA9700ACB551 /* DownloadedVideoBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedVideoBaseViewController.swift; sourceTree = "<group>"; };
 		B729E93E24DBEC5C00ACB551 /* DownloadedVideoBase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DownloadedVideoBase.storyboard; sourceTree = "<group>"; };
 		B729E94024DC3EB600ACB551 /* PurchasedVideoBase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PurchasedVideoBase.storyboard; sourceTree = "<group>"; };
@@ -115,12 +112,7 @@
 		B782734F24D8839B005A2FD6 /* MyListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListPresenter.swift; sourceTree = "<group>"; };
 		B782735124D883AB005A2FD6 /* SearchVideoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoPresenter.swift; sourceTree = "<group>"; };
 		B782735324D883B8005A2FD6 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
-		B782735524D88422005A2FD6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		B782735724D88434005A2FD6 /* PurchasedVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedVideoModel.swift; sourceTree = "<group>"; };
 		B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedVideoModel.swift; sourceTree = "<group>"; };
-		B782735B24D88455005A2FD6 /* MyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListModel.swift; sourceTree = "<group>"; };
-		B782735D24D88465005A2FD6 /* SearchVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoModel.swift; sourceTree = "<group>"; };
-		B782735F24D88474005A2FD6 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		B785CE6924D9C3B40036393B /* CommonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPresenter.swift; sourceTree = "<group>"; };
 		B785CE6B24D9C44E0036393B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B791312924DA861E00E0892A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -197,17 +189,13 @@
 			isa = PBXGroup;
 			children = (
 				B7679D5224E19DD2005DEFF9 /* WiFiSettingEntity.swift */,
-				B782735524D88422005A2FD6 /* LoginModel.swift */,
+				B704519E24E298CE00EFFD71 /* VideoInfoEntity.swift */,
 				B762227224DDF9FC0067BF20 /* LoginInfo.swift */,
 				B762227424DDFA0B0067BF20 /* VideoInfo.swift */,
 				B762227024DDF6B40067BF20 /* FirebaseService.swift */,
 				B77330F724DF919D0035902B /* FirebaseStorageService.swift */,
 				B7A2DEC424E181D50028E5DF /* NetworkStatusService.swift */,
-				B782735724D88434005A2FD6 /* PurchasedVideoModel.swift */,
 				B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */,
-				B782735B24D88455005A2FD6 /* MyListModel.swift */,
-				B782735D24D88465005A2FD6 /* SearchVideoModel.swift */,
-				B782735F24D88474005A2FD6 /* SettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,7 +459,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B782736024D88474005A2FD6 /* SettingModel.swift in Sources */,
 				B791313C24DABA0C00E0892A /* BaseView.swift in Sources */,
 				B79E8A5224D8788C00923859 /* LoginViewController.swift in Sources */,
 				B79E8A4E24D8788C00923859 /* AppDelegate.swift in Sources */,
@@ -479,7 +466,6 @@
 				B729E93D24DBEA9700ACB551 /* DownloadedVideoBaseViewController.swift in Sources */,
 				B791313A24DAA0F800E0892A /* VideoListTableViewCell.swift in Sources */,
 				B7CD6CAF24DF177D00C37A5A /* RegistrationPresenter.swift in Sources */,
-				B782735C24D88455005A2FD6 /* MyListModel.swift in Sources */,
 				B782734824D88225005A2FD6 /* SettingViewController.swift in Sources */,
 				B77330F824DF919D0035902B /* FirebaseStorageService.swift in Sources */,
 				B75EAA6324DC9F5900DEB06F /* VideoPlayerView.swift in Sources */,
@@ -488,6 +474,7 @@
 				B782735024D8839B005A2FD6 /* MyListPresenter.swift in Sources */,
 				B75CB49324DEF14700400448 /* CustomInputPartsView.swift in Sources */,
 				B7679D5324E19DD2005DEFF9 /* WiFiSettingEntity.swift in Sources */,
+				B704519F24E298CE00EFFD71 /* VideoInfoEntity.swift in Sources */,
 				B7A2DEC524E181D50028E5DF /* NetworkStatusService.swift in Sources */,
 				B762227124DDF6B40067BF20 /* FirebaseService.swift in Sources */,
 				B7A2DEC924E1978B0028E5DF /* Constant.swift in Sources */,
@@ -497,13 +484,10 @@
 				B782735224D883AB005A2FD6 /* SearchVideoPresenter.swift in Sources */,
 				B729E94924DC3FA200ACB551 /* MyListViewController.swift in Sources */,
 				B791312A24DA861E00E0892A /* R.generated.swift in Sources */,
-				B782735624D88422005A2FD6 /* LoginModel.swift in Sources */,
 				B762227524DDFA0B0067BF20 /* VideoInfo.swift in Sources */,
 				B785CE6C24D9C44E0036393B /* BaseViewController.swift in Sources */,
 				B72F39C124DB4CC40005CD8E /* DownloadedVideoViewController.swift in Sources */,
 				B729E94B24DC3FC100ACB551 /* MyListBaseViewController.swift in Sources */,
-				B782735824D88434005A2FD6 /* PurchasedVideoModel.swift in Sources */,
-				B782735E24D88465005A2FD6 /* SearchVideoModel.swift in Sources */,
 				B729E94324DC3EEE00ACB551 /* PurchasedVideoBaseViewController.swift in Sources */,
 				B762227324DDF9FC0067BF20 /* LoginInfo.swift in Sources */,
 				B782734C24D88380005A2FD6 /* PurchasedVideoPresenter.swift in Sources */,

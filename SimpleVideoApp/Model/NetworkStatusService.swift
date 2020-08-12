@@ -14,6 +14,7 @@ protocol NetworkStatusServiceProtocol {
 }
 
 class NetworkStatusService {
+    // TODO: シュミレータの場合NotReachableの分岐に入り落ちる
     func tes(succes: @escaping () -> Void, isDownload: Bool) {
         let entity = WiFiSettingEntity()
         let reachability = Reachability()
@@ -28,7 +29,6 @@ class NetworkStatusService {
             break
         case .ReachableViaWiFi: // Wi-Fi
             print("stats WiFi")
-            print("isDownload : \(isDownload)")
             if (isDownload) {
                 guard !entity.downloadWiFiOnly else { return }
             } else {

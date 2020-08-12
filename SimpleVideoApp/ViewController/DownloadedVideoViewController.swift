@@ -18,6 +18,8 @@ protocol DownloadedVideoViewControllerProtocol: BaseViewProtocol {
 
 class DownloadedVideoViewController: BaseViewController {
     
+    let entity = VideoInfoEntity()
+    
     private var testVideo: [VideoInfo] = []
     private var presenter: DownloadedVideoPresenterProtocol?
 
@@ -31,6 +33,7 @@ class DownloadedVideoViewController: BaseViewController {
         presenter = DownloadedVideoPresenter()
         presenter?.displayAllVideo()
  */
+        
         showAllVideo()
         
         tableView.delegate = self
@@ -41,8 +44,16 @@ class DownloadedVideoViewController: BaseViewController {
     }
     
     private func showAllVideo() {
+        let succes = { (items: [String]) -> Void in
+            for item in items {
+                self.testVideo.append(VideoInfo(title: item))
+            }
+        }
+        entity.readVideoInfoEntity(succes: succes)
+        /*
         // アプリ内に保存されている動画を全て表示する
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        print("path: \(path)")
         do {
             let content = try FileManager.default.contentsOfDirectory(atPath: path)
             for data in content {
@@ -51,6 +62,7 @@ class DownloadedVideoViewController: BaseViewController {
         } catch {
             print("error")
         }
+        */
     }
     
     private func showVideoPlayer(name: String, path: String) {

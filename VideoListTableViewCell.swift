@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol VideoListTableViewCellDelegate: AnyObject {
     func downloadVideo(fileName: String)
 }
 
 class VideoListTableViewCell: UITableViewCell {
+    
+    let entity = VideoInfoEntity()
     
     var delegate: VideoListTableViewCellDelegate?
     // TODO: presenterで取り扱うべき
@@ -48,13 +51,22 @@ class VideoListTableViewCell: UITableViewCell {
 
 extension VideoListTableViewCell: VideoListTableViewCellDelegate {
     func downloadVideo(fileName: String) {
-        print("downloadVideo()")
-        // TODO: presenterで取り扱うべき
+        self.firebaseStorageService = FirebaseStorageService()
+        self.firebaseStorageService?.downLoadVideo(fileName: fileName)
+        
+        // TODO: 確認のため現在時刻を保存
+        let date = Date()
+        entity.addVideoInfoEntity(title: fileName, date: date)
+        
+        // TODO: 実機が届き次第動作確認、一旦コメントアウト
+        // Wi-Fiに接続されているか否か
+        /*
         let succes = { () -> Void in
             self.firebaseStorageService = FirebaseStorageService()
             self.firebaseStorageService?.downLoadVideo(fileName: fileName)
         }
         networkStatusService = NetworkStatusService()
         networkStatusService?.downLoadVideo(succes: succes, isDownload: true)
+        */
     }
 }

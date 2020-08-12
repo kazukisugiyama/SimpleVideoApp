@@ -38,6 +38,10 @@ class PurchasedVideoViewController: BaseViewController {
         tableView.register(nib, forCellReuseIdentifier: "VideoListTableViewCell")
         
         showStorageAllVideo(isSync: false)
+        
+        //TODO: 後ほど削除
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        print("localFilePath: \(path)")
     }
     
     override func viewDidAppear(_ animated: Bool) {

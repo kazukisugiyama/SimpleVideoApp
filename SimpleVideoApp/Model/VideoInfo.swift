@@ -14,7 +14,6 @@ struct VideoInfo {
 
     init(title: String) {
         videoTitle = title
-        // ローカルの保管場所は変化しない想定
         filePath = Constant.LOCAL_DOCUMENTS_URL
     }
 }

@@ -10,30 +10,70 @@ import Foundation
 import RealmSwift
 
 class WiFiSettingEntity: Object {
-    @objc dynamic var streamWiFiOnly = Bool()
-    @objc dynamic var downloadWiFiOnly = Bool()
+    @objc dynamic var id = 0
+    @objc dynamic var streamWiFiOnly = false
+    @objc dynamic var downloadWiFiOnly = false
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+    func initEntity() {
+        do {
+            let realm = try! Realm()
+            // 既にRelmオブジェクトが生成されていた場合オブジェクトの追加を行わない
+            if realm.object(ofType: WiFiSettingEntity.self, forPrimaryKey: 1) == nil {
+                let entity = WiFiSettingEntity()
+                entity.id = 1
+                entity.streamWiFiOnly = false   // 初期値はfalse
+                entity.downloadWiFiOnly = false // 初期値はfalse
+                try realm.write {
+                    realm.add(entity)
+                    print("WiFiSettingEntity object add.")
+                }
+            }
+        } catch {
+            fatalError("realm add error.")
+        }
+    }
+    
+    func readEntity(succes: @escaping (_ isStreamOnly: Bool, _ isDownloadOnly: Bool) -> Void) {
+        do {
+            let realm = try Realm()
+            let objs = realm.objects(WiFiSettingEntity.self)
+            if let obj = objs.last {
+                succes(obj.streamWiFiOnly, obj.downloadWiFiOnly)
+            }
+        } catch {
+            fatalError("realm read error.")
+        }
+    }
     
     func writeStreamSetting(isValid: Bool) {
         do {
             let realm = try Realm()
-            try realm.write {
-                self.streamWiFiOnly = isValid
-                print("self.streamWiFiOnly : \(self.streamWiFiOnly)")
+            let objs = realm.objects(WiFiSettingEntity.self)
+            if let obj = objs.last {
+                try realm.write {
+                    obj.streamWiFiOnly = isValid
+                }
             }
         } catch {
-            fatalError("writeStreamSetting update error.")
+            fatalError("realm update error.")
         }
     }
     
     func writeDownloadSetting(isValid: Bool) {
         do {
             let realm = try Realm()
-            try realm.write {
-                self.downloadWiFiOnly = isValid
-                print("self.downloadWiFiOnly : \(self.downloadWiFiOnly)")
+            let objs = realm.objects(WiFiSettingEntity.self)
+            if let obj = objs.last {
+                try realm.write {
+                    obj.downloadWiFiOnly = isValid
+                }
             }
         } catch {
-            fatalError("writeDownloadSetting update error.")
+            fatalError("realm update error.")
         }
     }
+    
 }
