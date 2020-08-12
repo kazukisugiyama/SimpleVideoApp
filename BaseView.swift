@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - class
+
 class BaseView: UIView {
     private var view: UIView?
 

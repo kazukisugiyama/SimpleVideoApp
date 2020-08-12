@@ -17,17 +17,8 @@ protocol FirebaseServiceProtocol {
 }
 
 class FirebaseService {
-    
-    private func getUserToken() {
-        let currentUser = Auth.auth().currentUser
-        currentUser?.getIDTokenForcingRefresh(true, completion: { (idToken, error) in
-            if let error = error {
-                print("firebase getIDTokenForcingRefresh error : \(error)")
-            } else {
-                // 要調査
-            }
-        })
-    }
+    static let shared = FirebaseService()
+    private init() {}
 }
 
 extension FirebaseService: FirebaseServiceProtocol {

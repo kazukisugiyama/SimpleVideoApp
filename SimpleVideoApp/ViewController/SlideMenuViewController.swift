@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - class
+
 class SlideMenuViewController: BaseViewController {
     private enum ViewControllerType {
         case purchasedVideo
@@ -21,7 +23,7 @@ class SlideMenuViewController: BaseViewController {
         super.viewDidLoad()
     }
     
-// MARK: - IBAction
+    // MARK: - IBAction
     
     @IBAction func actionPurchasedVideo(_ sender: Any) {
         guard !isShow(type: .purchasedVideo) else {
@@ -55,7 +57,7 @@ class SlideMenuViewController: BaseViewController {
         showSetting()
     }
     
-// MARK: - private method
+    // MARK: - private method
     
     private func showPurchasedVideo() {
         let storyboard = R.storyboard.purchasedVideoBase()
@@ -100,7 +102,4 @@ class SlideMenuViewController: BaseViewController {
         default: return false
         }
     }
-    
-    
-    
 }

@@ -28,7 +28,6 @@
 		B75EAA6124DC9F0900DEB06F /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75EAA6024DC9F0900DEB06F /* VideoPlayer.storyboard */; };
 		B75EAA6324DC9F5900DEB06F /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EAA6224DC9F5900DEB06F /* VideoPlayerView.swift */; };
 		B75EAA6524DCA1F300DEB06F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EAA6424DCA1F300DEB06F /* VideoPlayerViewController.swift */; };
-		B75EAA6824DCAC5600DEB06F /* clip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B75EAA6724DCAC5600DEB06F /* clip.mp4 */; };
 		B762227124DDF6B40067BF20 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227024DDF6B40067BF20 /* FirebaseService.swift */; };
 		B762227324DDF9FC0067BF20 /* LoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227224DDF9FC0067BF20 /* LoginInfo.swift */; };
 		B762227524DDFA0B0067BF20 /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227424DDFA0B0067BF20 /* VideoInfo.swift */; };
@@ -66,7 +65,6 @@
 		B7A2ADA924DAFEBD009B53C0 /* VideoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7A2ADA824DAFEBD009B53C0 /* VideoListTableViewCell.xib */; };
 		B7A2DEC524E181D50028E5DF /* NetworkStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2DEC424E181D50028E5DF /* NetworkStatusService.swift */; };
 		B7A2DEC924E1978B0028E5DF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2DEC824E1978B0028E5DF /* Constant.swift */; };
-		B7C00BC224DD3F2900BCDBCC /* clip2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B7C00BC124DD3F2900BCDBCC /* clip2.mp4 */; };
 		B7CD6CAF24DF177D00C37A5A /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD6CAE24DF177D00C37A5A /* RegistrationPresenter.swift */; };
 		B7CD6CB124DF189700C37A5A /* PasswordReissuePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD6CB024DF189600C37A5A /* PasswordReissuePresenter.swift */; };
 /* End PBXBuildFile section */
@@ -93,7 +91,6 @@
 		B75EAA6024DC9F0900DEB06F /* VideoPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
 		B75EAA6224DC9F5900DEB06F /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		B75EAA6424DCA1F300DEB06F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
-		B75EAA6724DCAC5600DEB06F /* clip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = clip.mp4; sourceTree = "<group>"; };
 		B762227024DDF6B40067BF20 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		B762227224DDF9FC0067BF20 /* LoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
 		B762227424DDFA0B0067BF20 /* VideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
@@ -133,7 +130,6 @@
 		B7A2ADA824DAFEBD009B53C0 /* VideoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoListTableViewCell.xib; sourceTree = "<group>"; };
 		B7A2DEC424E181D50028E5DF /* NetworkStatusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusService.swift; sourceTree = "<group>"; };
 		B7A2DEC824E1978B0028E5DF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		B7C00BC124DD3F2900BCDBCC /* clip2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = clip2.mp4; sourceTree = "<group>"; };
 		B7CD6CAE24DF177D00C37A5A /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		B7CD6CB024DF189600C37A5A /* PasswordReissuePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordReissuePresenter.swift; sourceTree = "<group>"; };
 		BBB13B2B6C9FAAABE0DA23B1 /* Pods_SimpleVideoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleVideoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,11 +186,11 @@
 			children = (
 				B7679D5224E19DD2005DEFF9 /* WiFiSettingEntity.swift */,
 				B704519E24E298CE00EFFD71 /* VideoInfoEntity.swift */,
-				B762227224DDF9FC0067BF20 /* LoginInfo.swift */,
-				B762227424DDFA0B0067BF20 /* VideoInfo.swift */,
 				B762227024DDF6B40067BF20 /* FirebaseService.swift */,
 				B77330F724DF919D0035902B /* FirebaseStorageService.swift */,
 				B7A2DEC424E181D50028E5DF /* NetworkStatusService.swift */,
+				B762227224DDF9FC0067BF20 /* LoginInfo.swift */,
+				B762227424DDFA0B0067BF20 /* VideoInfo.swift */,
 				B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */,
 			);
 			path = Model;
@@ -219,8 +215,6 @@
 				B72F39C224DB55190005CD8E /* SlideMenuViewController.swift */,
 				B75EAA6424DCA1F300DEB06F /* VideoPlayerViewController.swift */,
 				B75EAA6224DC9F5900DEB06F /* VideoPlayerView.swift */,
-				B75EAA6724DCAC5600DEB06F /* clip.mp4 */,
-				B7C00BC124DD3F2900BCDBCC /* clip2.mp4 */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -367,7 +361,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B729E93F24DBEC5C00ACB551 /* DownloadedVideoBase.storyboard in Resources */,
-				B7C00BC224DD3F2900BCDBCC /* clip2.mp4 in Resources */,
 				B79E8A5524D8788C00923859 /* Login.storyboard in Resources */,
 				B782734224D88186005A2FD6 /* SearchVideo.storyboard in Resources */,
 				B75CB48F24DEEE1F00400448 /* PasswordReissue.storyboard in Resources */,
@@ -386,7 +379,6 @@
 				B7A2ADA924DAFEBD009B53C0 /* VideoListTableViewCell.xib in Resources */,
 				B782734424D881BC005A2FD6 /* Setting.storyboard in Resources */,
 				B75CB48B24DEEDD100400448 /* Registration.storyboard in Resources */,
-				B75EAA6824DCAC5600DEB06F /* clip.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

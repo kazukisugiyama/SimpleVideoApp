@@ -8,19 +8,23 @@
 
 import UIKit
 
+// MARK: - protocol
+
 protocol BaseViewProtocol: AnyObject {
     func closeView()
     func showStoryBoard(_ storyboard: UIKit.UIStoryboard)
     //func showPurchasedVideo()
 }
 
-class BaseViewController: UIViewController {
+// MARK: - class
 
+class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }
+
+// MARK: - extension
 
 extension BaseViewController: BaseViewProtocol {
     func closeView() {

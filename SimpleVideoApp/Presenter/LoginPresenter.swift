@@ -23,7 +23,6 @@ class LoginPresenter: CommonPresenter {
     
     // TODO: 書き方
     override init() {
-        firebaseService = FirebaseService()
         viewController = LoginViewController()
     }
 }
@@ -43,7 +42,7 @@ extension LoginPresenter: LoginPresenterProtocol {
             self.viewController?.indicationUnregisteredError()
         }
         
-        firebaseService?.signIn(email: mail, password: password, succes: succes, error: error)
+        FirebaseService.shared.signIn(email: mail, password: password, succes: succes, error: error)
     }
     
     func doPasswordReissue() {

@@ -9,6 +9,8 @@
 import AVFoundation
 import UIKit
 
+// MARK: - class
+
 class VideoPlayerView: UIView {
     
     var player: AVPlayer? {

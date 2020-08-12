@@ -21,20 +21,21 @@ class VideoPlayerViewController: BaseViewController {
     var cuurentRate: Float = 0
     var fileName: String = ""
     var filePath: String = ""
+    var periodicTimeObserverToken: Any?
+    var periodicBoundaryObserverToken: Any?
+    var itemDuration: Double = 0
+    var player = AVPlayer()
     
     @IBOutlet weak var playerView: VideoPlayerView!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var playAndPauseImageView: UIImageView!
-    
-    var player = AVPlayer()
-    var periodicTimeObserverToken: Any?
-    var periodicBoundaryObserverToken: Any?
-    var itemDuration: Double = 0
+    @IBOutlet weak var header: CustomNavigationBarView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudioSession()
         setupPlayer()
+        header.delegate = self
     }
     
     // MARK: - IBAction
@@ -215,11 +216,13 @@ class VideoPlayerViewController: BaseViewController {
     }
     
     private func showPurchasedVideo() {
-        let storyboard = R.storyboard.purchasedVideoBase()
+        let storyboard = R.storyboard.downloadedVideo()
         showStoryBoard(storyboard)
     }
     
 }
+
+// MARK: - extension
 
 extension VideoPlayerViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {

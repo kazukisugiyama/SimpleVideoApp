@@ -38,11 +38,9 @@ class RegistrationViewController: BaseViewController {
             self.presenter = RegistrationPresenter()
             self.presenter?.doLogin(mail: mail, password: password)
         }
-        
         mailInputView.actionCheckInputParts(succes: succes)
         passwordInputView.actionCheckInputParts(succes: succes)
         passwordConfirmationView.actionCheckInputParts(succes: succes)
-
     }
 }
 

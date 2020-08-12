@@ -19,50 +19,31 @@ protocol DownloadedVideoViewControllerProtocol: BaseViewProtocol {
 class DownloadedVideoViewController: BaseViewController {
     
     let entity = VideoInfoEntity()
-    
-    private var testVideo: [VideoInfo] = []
+    private var videoInfo: [VideoInfo] = []
     private var presenter: DownloadedVideoPresenterProtocol?
-
+    
     @IBOutlet weak var header: CustomNavigationBarView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         header.delegate = self
-        /*
-        presenter = DownloadedVideoPresenter()
-        presenter?.displayAllVideo()
- */
-        
-        showAllVideo()
-        
         tableView.delegate = self
         tableView.dataSource = self
         // Identifierの設定
         let nib = UINib(nibName: "VideoListTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "VideoListTableViewCell2")
+
+        showAllVideo()
     }
     
     private func showAllVideo() {
         let succes = { (items: [String]) -> Void in
             for item in items {
-                self.testVideo.append(VideoInfo(title: item))
+                self.videoInfo.append(VideoInfo(title: item))
             }
         }
         entity.readVideoInfoEntity(succes: succes)
-        /*
-        // アプリ内に保存されている動画を全て表示する
-        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        print("path: \(path)")
-        do {
-            let content = try FileManager.default.contentsOfDirectory(atPath: path)
-            for data in content {
-                testVideo.append(VideoInfo(title: data))
-            }
-        } catch {
-            print("error")
-        }
-        */
     }
     
     private func showVideoPlayer(name: String, path: String) {
@@ -102,20 +83,20 @@ extension DownloadedVideoViewController: CustomNavigationBarViewDelegate {
 extension DownloadedVideoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        showVideoPlayer(name: testVideo[indexPath.row].videoTitle, path: testVideo[indexPath.row].filePath)
+        showVideoPlayer(name: videoInfo[indexPath.row].videoTitle, path: videoInfo[indexPath.row].filePath)
     }
 }
 
 extension DownloadedVideoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        testVideo.count
+        videoInfo.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "VideoListTableViewCell2", for: indexPath) as? VideoListTableViewCell else {
             return UITableViewCell()
         }
-        cell.videoModel = testVideo[indexPath.row]
+        cell.videoModel = videoInfo[indexPath.row]
         return cell
     }
 }

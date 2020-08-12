@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Reachability
+
+// MARK: - class
 
 class SettingViewController: BaseViewController {
 
@@ -24,8 +25,7 @@ class SettingViewController: BaseViewController {
     }
     
     @IBAction func actionLogout(_ sender: Any) {
-        let firebaseService = FirebaseService()
-        firebaseService.signOut()
+        FirebaseService.shared.signOut()
         showLogin()
     }
     
@@ -57,6 +57,8 @@ class SettingViewController: BaseViewController {
         showStoryBoard(storyboard)
     }
 }
+
+// MARK: - extension
 
 extension SettingViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {

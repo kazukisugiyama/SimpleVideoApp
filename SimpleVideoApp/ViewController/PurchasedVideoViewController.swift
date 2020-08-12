@@ -38,10 +38,6 @@ class PurchasedVideoViewController: BaseViewController {
         tableView.register(nib, forCellReuseIdentifier: "VideoListTableViewCell")
         
         showStorageAllVideo(isSync: false)
-        
-        //TODO: 後ほど削除
-        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        print("localFilePath: \(path)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -72,8 +68,7 @@ class PurchasedVideoViewController: BaseViewController {
                 self.tableView.reloadData()
             }
         }
-        model = FirebaseStorageService()
-        model?.displayStorageAllVideo(succes: succes)
+        FirebaseStorageService.shared.displayStorageAllVideo(succes: succes)
     }
     
     private func showDownloadedVideo() {
@@ -91,7 +86,7 @@ extension PurchasedVideoViewController: CustomNavigationBarViewDelegate {
     }
     
     func actionRightButton1() {
-        // リストに追加
+        // TODO: マイリストに追加
     }
     
     func actionRightButton2() {

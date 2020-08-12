@@ -24,8 +24,8 @@ class WiFiSettingEntity: Object {
             if realm.object(ofType: WiFiSettingEntity.self, forPrimaryKey: 1) == nil {
                 let entity = WiFiSettingEntity()
                 entity.id = 1
-                entity.streamWiFiOnly = false   // 初期値はfalse
-                entity.downloadWiFiOnly = false // 初期値はfalse
+                entity.streamWiFiOnly = false
+                entity.downloadWiFiOnly = false
                 try realm.write {
                     realm.add(entity)
                     print("WiFiSettingEntity object add.")

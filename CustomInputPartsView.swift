@@ -8,10 +8,14 @@
 
 import UIKit
 
+// MARK: - protocol
+
 protocol CustomInputPartsViewDelegate: AnyObject {
     func actionCheckInputParts(succes: @escaping () -> Void)
     func indicationError()
 }
+
+// MARK: - class
 
 class CustomInputPartsView: BaseView {
     private enum InputType: Int {
@@ -32,6 +36,7 @@ class CustomInputPartsView: BaseView {
     
     weak var delegate: CustomInputPartsViewDelegate?
     private var inputType: InputType = .mail
+    
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -39,7 +44,7 @@ class CustomInputPartsView: BaseView {
         super.initView()
     }
     
-// MARK: - private method
+    // MARK: - private method
     
     private func updateView() {
         errorLabel.isHidden = true
@@ -50,9 +55,11 @@ class CustomInputPartsView: BaseView {
             errorLabel.text = "メールアドレスが入力されていません"
         case .password:
             inputTextField.placeholder = "パスワード"
+            inputTextField.isSecureTextEntry = true
             errorLabel.text = "パスワードが入力されていません"
         case .passwordConfirmation:
             inputTextField.placeholder = "パスワード確認"
+            inputTextField.isSecureTextEntry = true
             errorLabel.text = "パスワードが入力されていません"
         }
     }

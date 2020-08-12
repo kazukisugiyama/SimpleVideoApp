@@ -35,6 +35,6 @@ extension MyListViewController: CustomNavigationBarViewDelegate {
     }
     
     func actionRightButton2() {
-        // 更新ボタン
+        // TODO: 更新ボタン
     }
 }

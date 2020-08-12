@@ -22,17 +22,12 @@ protocol LoginViewControllerProtocol: BaseViewProtocol {
 class LoginViewController: BaseViewController {
     
     var presenter: LoginPresenterProtocol?
-    var firebaseService: FirebaseServiceProtocol?
     
     @IBOutlet weak var mailInputView: CustomInputPartsView!
     @IBOutlet weak var passwordInputView: CustomInputPartsView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
     }
     
     @IBAction func actionLogin(_ sender: Any) {
@@ -47,6 +42,10 @@ class LoginViewController: BaseViewController {
         passwordInputView.actionCheckInputParts(succes: succes)
     }
     
+    @IBAction func actionReissue(_ sender: Any) {
+        showPasswordReissue()
+    }
+    
     private func doLogin(mail: String, password: String) {
         let succes = { () -> Void in
             self.showPurchasedVideo()
@@ -55,12 +54,7 @@ class LoginViewController: BaseViewController {
             self.indicationUnregisteredError()
         }
         
-        firebaseService = FirebaseService()
-        firebaseService?.signIn(email: mail, password: password, succes: succes, error: error)
-    }
-    
-    @IBAction func actionReissue(_ sender: Any) {
-        showPasswordReissue()
+        FirebaseService.shared.signIn(email: mail, password: password, succes: succes, error: error)
     }
     
 }

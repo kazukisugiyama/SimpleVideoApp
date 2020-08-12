@@ -38,14 +38,14 @@ class PasswordReissueViewController: BaseViewController {
     @IBAction func actionShowLogin(_ sender: Any) {
         showLogin()
     }
+    
     private func passwordReset() {
         guard let mail = mailInputView.inputTextField.text else { return }
         
-        let firebaseService = FirebaseService()
         let succesPasswrdReset = { () -> Void in
             self.sendCompletely()
         }
-        firebaseService.passwordReset(email: mail, succes: succesPasswrdReset)
+        FirebaseService.shared.passwordReset(email: mail, succes: succesPasswrdReset)
     }
     
     private func showLogin() {

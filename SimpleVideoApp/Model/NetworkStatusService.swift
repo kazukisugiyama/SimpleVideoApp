@@ -14,8 +14,12 @@ protocol NetworkStatusServiceProtocol {
 }
 
 class NetworkStatusService {
-    // TODO: シュミレータの場合NotReachableの分岐に入り落ちる
-    func tes(succes: @escaping () -> Void, isDownload: Bool) {
+    static let shared = NetworkStatusService()
+    private init() {}
+}
+
+extension NetworkStatusService: NetworkStatusServiceProtocol {
+    func downLoadVideo(succes: @escaping () -> Void, isDownload: Bool) {
         let entity = WiFiSettingEntity()
         let reachability = Reachability()
         let netStatus = reachability.currentReachabilityStatus()
@@ -40,11 +44,5 @@ class NetworkStatusService {
             break
         }
         succes()
-    }
-}
-
-extension NetworkStatusService: NetworkStatusServiceProtocol {
-    func downLoadVideo(succes: @escaping () -> Void, isDownload: Bool) {
-        tes(succes: succes, isDownload: isDownload)
     }
 }

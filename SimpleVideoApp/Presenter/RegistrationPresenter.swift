@@ -22,7 +22,6 @@ class RegistrationPresenter: CommonPresenter {
     
     // TODO: 書き方
     override init() {
-        firebaseService = FirebaseService()
         viewController = RegistrationViewController()
     }
     

@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - class
+
 class SearchVideoViewController: BaseViewController {
     
     @IBOutlet weak var header: CustomNavigationBarView!
@@ -22,6 +24,8 @@ class SearchVideoViewController: BaseViewController {
         showStoryBoard(storyboard)
     }
 }
+
+// MARK: - extension
 
 extension SearchVideoViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {

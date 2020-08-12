@@ -16,8 +16,12 @@ protocol FirebaseStorageServiceProtocol {
 }
 
 class FirebaseStorageService {
-    
-    func downLoadForFirebaseStorage(fileName: String) {
+    static let shared = FirebaseStorageService()
+    private init() {}
+}
+
+extension FirebaseStorageService: FirebaseStorageServiceProtocol {
+    func downLoadVideo(fileName: String) {
         // Storageは1箇所に集約されるので固定値で問題ない想定
         let videoRef = Storage.storage().reference(forURL: Constant.STORAGE_URL).child(fileName)
         videoRef.getData(maxSize: INT64_MAX) { (data, error) in
@@ -35,32 +39,6 @@ class FirebaseStorageService {
                 }
             }
         }
-    }
-    
-    func tes2() {
-        let ref = Storage.storage().reference(forURL: Constant.STORAGE_URL)
-        ref.listAll { (result, error) in
-            if let error = error {
-                print("listAll error: \(error)")
-            } else {
-                var datas: [String] = []
-                let items = result.items
-                for item in items {
-                    var data = item.description
-                    guard let range2 = Constant.STORAGE_URL_ADD_SLASH.range(of: Constant.STORAGE_URL_ADD_SLASH) else { return }
-                    data.replaceSubrange(range2, with: "")
-                    datas.append(data)
-                }
-                print("datas : \(datas)")
-            }
-        }
-    }
-
-}
-
-extension FirebaseStorageService: FirebaseStorageServiceProtocol {
-    func downLoadVideo(fileName: String) {
-        downLoadForFirebaseStorage(fileName: fileName)
     }
     
     func displayStorageAllVideo(succes: @escaping (_ item: String) -> Void) {

@@ -7,11 +7,15 @@
 
 import UIKit
 
+// MARK: - protocol
+
 protocol CustomNavigationBarViewDelegate: AnyObject {
     func actionLeftButton()
     func actionRightButton1()
     func actionRightButton2()
 }
+
+// MARK: - class
 
 class CustomNavigationBarView: BaseView {
     private enum HeaderType: Int {
@@ -34,7 +38,6 @@ class CustomNavigationBarView: BaseView {
     }
     
     weak var delegate: CustomNavigationBarViewDelegate?
-    
     private var headerType: HeaderType = .purchased
     
     @IBOutlet weak var titleNavigationItem: UINavigationItem!
@@ -52,7 +55,6 @@ class CustomNavigationBarView: BaseView {
     @IBAction func actionLeftButton(_ sender: Any) {
         // メニュー、戻るボタン
         delegate?.actionLeftButton()
-        print("IBAction actionLeftButton")
     }
     
     @IBAction func actionRightButton1(_ sender: Any) {
@@ -128,5 +130,4 @@ class CustomNavigationBarView: BaseView {
         }
     }
     
-
 }

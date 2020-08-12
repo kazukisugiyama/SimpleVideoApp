@@ -9,27 +9,26 @@
 import UIKit
 import RealmSwift
 
+// MARK: - protocol
+
 protocol VideoListTableViewCellDelegate: AnyObject {
     func downloadVideo(fileName: String)
 }
 
+// MARK: - class
+
 class VideoListTableViewCell: UITableViewCell {
     
     let entity = VideoInfoEntity()
-    
     var delegate: VideoListTableViewCellDelegate?
-    // TODO: presenterで取り扱うべき
-    var firebaseStorageService: FirebaseStorageServiceProtocol?
-    var networkStatusService: NetworkStatusServiceProtocol?
-    
-    @IBOutlet private weak var titleLabel: UILabel!
-    
     var videoModel: VideoInfo? {
         didSet {
             guard let model = videoModel else { return }
             titleLabel.text = model.videoTitle
         }
     }
+    
+    @IBOutlet private weak var titleLabel: UILabel!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -49,10 +48,11 @@ class VideoListTableViewCell: UITableViewCell {
     }
 }
 
+// MARK: - extension
+
 extension VideoListTableViewCell: VideoListTableViewCellDelegate {
     func downloadVideo(fileName: String) {
-        self.firebaseStorageService = FirebaseStorageService()
-        self.firebaseStorageService?.downLoadVideo(fileName: fileName)
+        FirebaseStorageService.shared.downLoadVideo(fileName: fileName)
         
         // TODO: 確認のため現在時刻を保存
         let date = Date()
@@ -62,11 +62,9 @@ extension VideoListTableViewCell: VideoListTableViewCellDelegate {
         // Wi-Fiに接続されているか否か
         /*
         let succes = { () -> Void in
-            self.firebaseStorageService = FirebaseStorageService()
-            self.firebaseStorageService?.downLoadVideo(fileName: fileName)
+            FirebaseStorageService.shared.downLoadVideo(fileName: fileName)
         }
-        networkStatusService = NetworkStatusService()
-        networkStatusService?.downLoadVideo(succes: succes, isDownload: true)
+        NetworkStatusService.shared.downLoadVideo(succes: succes, isDownload: true)
         */
     }
 }

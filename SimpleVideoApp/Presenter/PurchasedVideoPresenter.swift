@@ -23,7 +23,7 @@ class PurchasedVideoPresenter: CommonPresenter {
     
     // TODO: ここでインスタンス化すべきじゃない
     override init() {
-        model = FirebaseStorageService()
+        //model = FirebaseStorageService()
         viewController = PurchasedVideoViewController() as! PurchasedVideoViewControllerProtocol
     }
 }

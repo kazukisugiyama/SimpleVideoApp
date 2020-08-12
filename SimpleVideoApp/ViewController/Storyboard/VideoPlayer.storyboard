@@ -183,6 +183,7 @@
                         <viewLayoutGuide key="safeArea" id="gJG-Je-Dn2"/>
                     </view>
                     <connections>
+                        <outlet property="header" destination="EsF-6h-Xch" id="83C-yr-kft"/>
                         <outlet property="playAndPauseImageView" destination="NiK-bM-EAz" id="Gee-t3-ad6"/>
                         <outlet property="playerView" destination="1za-dX-35I" id="EZG-Uk-piT"/>
                         <outlet property="slider" destination="g30-HG-yNa" id="yQb-v7-5ZH"/>
