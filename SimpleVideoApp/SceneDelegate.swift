@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else {
             print("currentUser not nil")
             let window = UIWindow(windowScene: windowScene)
-            let storyboard = UIStoryboard(name: "PurchasedVideo", bundle: Bundle.main)
+            let storyboard = UIStoryboard(name: "PurchasedVideoBase", bundle: Bundle.main)
             self.window = window
             self.window?.rootViewController = storyboard.instantiateInitialViewController()
             self.window?.makeKeyAndVisible()
