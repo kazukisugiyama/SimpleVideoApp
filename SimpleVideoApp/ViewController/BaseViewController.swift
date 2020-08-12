@@ -29,13 +29,10 @@ extension BaseViewController: BaseViewProtocol {
     
     func showStoryBoard(_ storyboard: UIKit.UIStoryboard) {
         dismiss(animated: true, completion: nil)
-        if let vc = storyboard.instantiateInitialViewController() {
-            vc.modalPresentationStyle = .fullScreen
-            guard let rootViewController = UIApplication.shared.keyWindow?.rootViewController else {
-                print("nil")
-                return
-            }
-            rootViewController.present(vc, animated: false, completion: nil)
-        }
+
+        guard let vc = storyboard.instantiateInitialViewController() else { return }
+        vc.modalPresentationStyle = .fullScreen
+        // presentの場合rootが遷移時に映るため、rootViewControllerを入れ替えることで画面遷移の動きを実装
+        UIApplication.shared.keyWindow?.rootViewController = vc
     }
 }
