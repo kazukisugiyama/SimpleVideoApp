@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CustomInputPartsViewDelegate: AnyObject {
-    func actionCheckInputParts()
+    func actionCheckInputParts(succes: @escaping () -> Void)
     func indicationError()
 }
 
@@ -57,11 +57,12 @@ class CustomInputPartsView: BaseView {
         }
     }
     
-    private func checkTextField() {
+    private func checkTextField(succes: @escaping () -> Void) {
         if inputTextField.text == "" {
             errorLabel.isHidden = false
         } else {
             errorLabel.isHidden = true
+            succes()
         }
     }
     
@@ -83,8 +84,8 @@ class CustomInputPartsView: BaseView {
 // MARK: - extension
 
 extension CustomInputPartsView: CustomInputPartsViewDelegate {
-    func actionCheckInputParts() {
-        checkTextField()
+    func actionCheckInputParts(succes: @escaping () -> Void) {
+        checkTextField(succes: succes)
     }
     
     func indicationError() {

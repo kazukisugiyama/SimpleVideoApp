@@ -28,19 +28,21 @@ class RegistrationViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TODO: LoginViewController参照
-        presenter = RegistrationPresenter()
     }
     
     @IBAction func actionRegister(_ sender: Any) {
         guard let mail = mailInputView.inputTextField.text,
             let password = passwordInputView.inputTextField.text else { return }
         
-        mailInputView.actionCheckInputParts()
-        passwordInputView.actionCheckInputParts()
-        passwordConfirmationView.actionCheckInputParts()
+        let succes = { () -> Void in
+            self.presenter = RegistrationPresenter()
+            self.presenter?.doLogin(mail: mail, password: password)
+        }
+        
+        mailInputView.actionCheckInputParts(succes: succes)
+        passwordInputView.actionCheckInputParts(succes: succes)
+        passwordConfirmationView.actionCheckInputParts(succes: succes)
 
-        presenter?.doLogin(mail: mail, password: password)
     }
 }
 

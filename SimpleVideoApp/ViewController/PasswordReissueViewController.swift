@@ -26,17 +26,31 @@ class PasswordReissueViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         completedLabel.isHidden = true
-        // TODO: LoginViewController参照
-        presenter = PasswordReissuePresenter()
     }
     
     @IBAction func actionPasswordReissue(_ sender: Any) {
+        let succesCheckText = { () -> Void in
+            self.passwordReset()
+        }
+        mailInputView.actionCheckInputParts(succes: succesCheckText)
+    }
+    
+    @IBAction func actionShowLogin(_ sender: Any) {
+        showLogin()
+    }
+    private func passwordReset() {
         guard let mail = mailInputView.inputTextField.text else { return }
         
-        mailInputView.actionCheckInputParts()
-        completedLabel.isHidden = false
-        
-        presenter?.doReset(mail: mail)
+        let firebaseService = FirebaseService()
+        let succesPasswrdReset = { () -> Void in
+            self.sendCompletely()
+        }
+        firebaseService.passwordReset(email: mail, succes: succesPasswrdReset)
+    }
+    
+    private func showLogin() {
+        let storyboard = R.storyboard.login()
+        showStoryBoard(storyboard)
     }
     
 }

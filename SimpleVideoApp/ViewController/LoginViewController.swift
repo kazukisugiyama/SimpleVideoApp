@@ -22,16 +22,13 @@ protocol LoginViewControllerProtocol: BaseViewProtocol {
 class LoginViewController: BaseViewController {
     
     var presenter: LoginPresenterProtocol?
+    var firebaseService: FirebaseServiceProtocol?
     
     @IBOutlet weak var mailInputView: CustomInputPartsView!
     @IBOutlet weak var passwordInputView: CustomInputPartsView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: インスタンスをviewDidLoadで入れることは正しい？
-        // サンプルを見ても明示的に行っていないので若干自信がない
-        // 循環参照云々で問題起きないか心配
-        presenter = LoginPresenter()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,14 +38,29 @@ class LoginViewController: BaseViewController {
     @IBAction func actionLogin(_ sender: Any) {
         guard let mail = mailInputView.inputTextField.text,
             let password = passwordInputView.inputTextField.text else { return }
-        mailInputView.actionCheckInputParts()
-        passwordInputView.actionCheckInputParts()
         
-        presenter?.doLogin(mail: mail, password: password)
+        let succes = { () -> Void in
+            print("succes clouser")
+            self.doLogin(mail: mail, password: password)
+        }
+        mailInputView.actionCheckInputParts(succes: succes)
+        passwordInputView.actionCheckInputParts(succes: succes)
+    }
+    
+    private func doLogin(mail: String, password: String) {
+        let succes = { () -> Void in
+            self.showPurchasedVideo()
+        }
+        let error = { () -> Void in
+            self.indicationUnregisteredError()
+        }
+        
+        firebaseService = FirebaseService()
+        firebaseService?.signIn(email: mail, password: password, succes: succes, error: error)
     }
     
     @IBAction func actionReissue(_ sender: Any) {
-        presenter?.doPasswordReissue()
+        showPasswordReissue()
     }
     
 }
