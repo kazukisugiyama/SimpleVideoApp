@@ -51,16 +51,16 @@ class CustomInputPartsView: BaseView {
         
         switch inputType {
         case .mail:
-            inputTextField.placeholder = "メールアドレス"
-            errorLabel.text = "メールアドレスが入力されていません"
+            inputTextField.placeholder = Constant.PLACEHOLDER_TEXT_MAIL
+            errorLabel.text = Constant.ERROR_TEXT_BLANK_MAIL
         case .password:
-            inputTextField.placeholder = "パスワード"
+            inputTextField.placeholder = Constant.PLACEHOLDER_TEXT_PASSWORD
             inputTextField.isSecureTextEntry = true
-            errorLabel.text = "パスワードが入力されていません"
+            errorLabel.text = Constant.ERROR_TEXT_BLANK_PASSWORD
         case .passwordConfirmation:
-            inputTextField.placeholder = "パスワード確認"
+            inputTextField.placeholder = Constant.PLACEHOLDER_TEXT_PASSWORD_CONFIRMATION
             inputTextField.isSecureTextEntry = true
-            errorLabel.text = "パスワードが入力されていません"
+            errorLabel.text = Constant.ERROR_TEXT_BLANK_PASSWORD
         }
     }
     
@@ -77,10 +77,10 @@ class CustomInputPartsView: BaseView {
         switch inputType {
         case .mail:
             errorLabel.isHidden = false
-            errorLabel.text = "入力されたメールアドレスは登録されていません"
+            errorLabel.text = Constant.ERROR_TEXT_UNREGISTERED_MAIL
         case .password:
             errorLabel.isHidden = false
-            errorLabel.text = "入力されたパスワードは登録されていません"
+            errorLabel.text = Constant.ERROR_TEXT_UNREGISTERED_PASSWORD
         case .passwordConfirmation:
             break
         }

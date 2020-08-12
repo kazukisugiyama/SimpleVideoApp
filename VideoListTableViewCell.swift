@@ -40,8 +40,6 @@ class VideoListTableViewCell: UITableViewCell {
     
     @IBAction func actionDownload(_ sender: Any) {
         // 端末にダウンロードを行う
-        print("DownLoad")
-        // TODO: なぜ自クラスのインスタンス化を行わなければいけないのか？
         delegate = VideoListTableViewCell()
         guard let fileName = titleLabel.text else { return }
         delegate?.downloadVideo(fileName: fileName)
@@ -54,7 +52,7 @@ extension VideoListTableViewCell: VideoListTableViewCellDelegate {
     func downloadVideo(fileName: String) {
         FirebaseStorageService.shared.downLoadVideo(fileName: fileName)
         
-        // TODO: 確認のため現在時刻を保存
+        // TODO: FireStore実装まで仮で現在時刻を入れる
         let date = Date()
         entity.addVideoInfoEntity(title: fileName, date: date)
         

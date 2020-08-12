@@ -72,7 +72,7 @@ class CustomNavigationBarView: BaseView {
     private func updateView() {
         switch headerType {
         case .purchased:
-            titleNavigationItem.title = "購入済み"
+            titleNavigationItem.title = Constant.TITLE_PURCHASED
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "line.horizontal.3")
             rightButton1.isEnabled = true
@@ -80,7 +80,7 @@ class CustomNavigationBarView: BaseView {
             rightButton2.isEnabled = true
             rightButton2.image = UIImage(systemName: "arrow.counterclockwise")
         case .downloaded:
-            titleNavigationItem.title = "ダウンロード済み"
+            titleNavigationItem.title = Constant.TITLE_DOWNLOADED
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "line.horizontal.3")
             rightButton1.isEnabled = false
@@ -89,7 +89,7 @@ class CustomNavigationBarView: BaseView {
             rightButton2.isEnabled = true
             rightButton2.image = UIImage(systemName: "arrow.counterclockwise")
         case .myList:
-            titleNavigationItem.title = "マイリスト"
+            titleNavigationItem.title = Constant.TITLE_MYLIST
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "line.horizontal.3")
             rightButton1.isEnabled = true
@@ -97,7 +97,7 @@ class CustomNavigationBarView: BaseView {
             rightButton2.isEnabled = true
             rightButton2.image = UIImage(systemName: "arrow.counterclockwise")
         case .search:
-            titleNavigationItem.title = "検索"
+            titleNavigationItem.title = Constant.TITLE_SEARCH
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "arrow.left")
             rightButton1.isEnabled = false
@@ -107,7 +107,7 @@ class CustomNavigationBarView: BaseView {
             rightButton2.image = UIImage(systemName: "")
             rightButton2.tintColor = UIColor.clear
         case .setting:
-            titleNavigationItem.title = "設定"
+            titleNavigationItem.title = Constant.TITLE_SETTING
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "arrow.left")
             rightButton1.isEnabled = false
@@ -117,7 +117,7 @@ class CustomNavigationBarView: BaseView {
             rightButton2.image = UIImage(systemName: "")
             rightButton2.tintColor = UIColor.clear
         case .player:
-            titleNavigationItem.title = ""
+            titleNavigationItem.title = Constant.TITLE_BLANK
             navigationBar.backgroundColor = UIColor.black
             leftButton.isEnabled = true
             leftButton.image = UIImage(systemName: "arrow.left")

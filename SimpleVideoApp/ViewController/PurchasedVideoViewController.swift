@@ -46,10 +46,10 @@ class PurchasedVideoViewController: BaseViewController {
     
     @IBAction func actionSort(_ sender: Any) {
         // 登録された日付で昇順、降順でソートを行う
-        if sortButton.title == "購入日が新しい順" {
-            sortButton.title = "購入日が古い順"
+        if sortButton.title == Constant.PURCHASE_DATE_NEW_ORDER {
+            sortButton.title = Constant.PURCHASE_DATE_OLD_ORDER
         } else {
-            sortButton.title = "購入日が新しい順"
+            sortButton.title = Constant.PURCHASE_DATE_NEW_ORDER
         }
     }
     

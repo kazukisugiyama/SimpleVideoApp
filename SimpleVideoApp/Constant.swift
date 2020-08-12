@@ -23,5 +23,18 @@ class Constant{
     // MARK: - Display Parts
     static let PURCHASE_DATE_NEW_ORDER = "購入日が新しい順"
     static let PURCHASE_DATE_OLD_ORDER = "購入日が古い順"
+    static let PLACEHOLDER_TEXT_MAIL = "メールアドレス"
+    static let PLACEHOLDER_TEXT_PASSWORD = "パスワード"
+    static let PLACEHOLDER_TEXT_PASSWORD_CONFIRMATION = "パスワード確認"
+    static let ERROR_TEXT_BLANK_MAIL = "メールアドレスが入力されていません"
+    static let ERROR_TEXT_BLANK_PASSWORD = "パスワードが入力されていません"
+    static let ERROR_TEXT_UNREGISTERED_MAIL = "入力されたメールアドレスは登録されていません"
+    static let ERROR_TEXT_UNREGISTERED_PASSWORD = "入力されたパスワードは登録されていません"
+    static let TITLE_PURCHASED = "購入済み"
+    static let TITLE_DOWNLOADED = "ダウンロード済み"
+    static let TITLE_MYLIST = "マイリスト"
+    static let TITLE_SEARCH = "検索"
+    static let TITLE_SETTING = "設定"
+    static let TITLE_BLANK = ""
 }
 
