@@ -17,25 +17,21 @@ protocol RegistrationPresenterProtocol: CommonPresenterProtocol {
 // MARK: - class
 
 class RegistrationPresenter: CommonPresenter {
-    var firebaseService: FirebaseServiceProtocol?
     var viewController: RegistrationViewControllerProtocol?
     
-    // TODO: 書き方
-    override init() {
-        viewController = RegistrationViewController()
+    init(view: RegistrationViewController) {
+        self.viewController = view
     }
-    
 }
 
 // MARK: - extension
 
 extension RegistrationPresenter: RegistrationPresenterProtocol {
     func doLogin(mail: String, password: String) {
-        NSLog("doLogin pr")
         let succes = { () -> Void in
-            self.viewController?.showLogin()
+            self.viewController?.showCompleteLabel()
         }
         
-        firebaseService?.memberRegistration(email: mail, password: password, succes: succes)
+        FirebaseService.shared.memberRegistration(email: mail, password: password, succes: succes)
     }
 }

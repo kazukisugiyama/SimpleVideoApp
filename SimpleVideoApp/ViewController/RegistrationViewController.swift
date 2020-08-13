@@ -13,7 +13,7 @@ import Rswift
 // MARK: - protocol
 
 protocol RegistrationViewControllerProtocol: BaseViewProtocol {
-    func showLogin()
+    func showCompleteLabel()
 }
 
 // MARK: - class
@@ -25,9 +25,12 @@ class RegistrationViewController: BaseViewController {
     @IBOutlet weak var mailInputView: CustomInputPartsView!
     @IBOutlet weak var passwordInputView: CustomInputPartsView!
     @IBOutlet weak var passwordConfirmationView: CustomInputPartsView!
+    @IBOutlet weak var completeRegistrationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = RegistrationPresenter(view: self)
+        completeRegistrationLabel.isHidden = true
     }
     
     @IBAction func actionRegister(_ sender: Any) {
@@ -35,20 +38,25 @@ class RegistrationViewController: BaseViewController {
             let password = passwordInputView.inputTextField.text else { return }
         
         let succes = { () -> Void in
-            self.presenter = RegistrationPresenter()
+            self.presenter = RegistrationPresenter(view: self)
             self.presenter?.doLogin(mail: mail, password: password)
         }
         mailInputView.actionCheckInputParts(succes: succes)
         passwordInputView.actionCheckInputParts(succes: succes)
         passwordConfirmationView.actionCheckInputParts(succes: succes)
     }
+    
+    @IBAction func actionLogin(_ sender: Any) {
+        let storyboard = R.storyboard.login()
+        showStoryBoard(storyboard)
+    }
+    
 }
 
 // MARK: - extension
 
 extension RegistrationViewController: RegistrationViewControllerProtocol {    
-    func showLogin() {
-        let storyboard = R.storyboard.login()
-        showStoryBoard(storyboard)
+    func showCompleteLabel() {
+        completeRegistrationLabel.isHidden = false
     }
 }

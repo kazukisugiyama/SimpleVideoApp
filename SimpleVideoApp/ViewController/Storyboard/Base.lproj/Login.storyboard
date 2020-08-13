@@ -62,10 +62,20 @@
                                     <action selector="actionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="duR-Ev-6eY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcm-Pj-ZGl">
-                                <rect key="frame" x="50" y="339" width="314" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ja0-SE-1YA">
+                                <rect key="frame" x="50" y="349" width="314" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4iK-56-WyI"/>
+                                    <constraint firstAttribute="height" constant="30" id="zyK-AC-q9X"/>
+                                </constraints>
+                                <state key="normal" title="はじめての方はこちら"/>
+                                <connections>
+                                    <action selector="actionRegistration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ksg-Gg-9ro"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcm-Pj-ZGl">
+                                <rect key="frame" x="50" y="399" width="314" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2G4-mN-nhU"/>
                                 </constraints>
                                 <state key="normal" title="パスワードを忘れた方"/>
                                 <connections>
@@ -75,18 +85,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ja0-SE-1YA" secondAttribute="trailing" constant="50" id="10u-0f-I9n"/>
+                            <constraint firstItem="ja0-SE-1YA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="6WV-MJ-2ex"/>
                             <constraint firstItem="vu3-Va-UNq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="6cn-uv-xBi"/>
                             <constraint firstItem="fRo-dB-sbx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="9o2-Rp-sZl"/>
-                            <constraint firstItem="Fcm-Pj-ZGl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="A0d-co-bT0"/>
+                            <constraint firstItem="Fcm-Pj-ZGl" firstAttribute="top" secondItem="ja0-SE-1YA" secondAttribute="bottom" constant="20" id="ARs-5X-Czn"/>
                             <constraint firstItem="4wq-Wo-TF8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GqN-6f-tpz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vu3-Va-UNq" secondAttribute="trailing" constant="50" id="Mf1-ca-Rb6"/>
                             <constraint firstItem="fRo-dB-sbx" firstAttribute="top" secondItem="4wq-Wo-TF8" secondAttribute="bottom" constant="10" id="OUE-fF-H0h"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fcm-Pj-ZGl" secondAttribute="trailing" constant="50" id="V7j-5O-U4f"/>
-                            <constraint firstItem="Fcm-Pj-ZGl" firstAttribute="top" secondItem="fRo-dB-sbx" secondAttribute="bottom" constant="20" id="Vj8-Qh-GMK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fRo-dB-sbx" secondAttribute="trailing" constant="50" id="Wrr-M9-QbS"/>
                             <constraint firstItem="4wq-Wo-TF8" firstAttribute="top" secondItem="vu3-Va-UNq" secondAttribute="bottom" constant="10" id="XgW-a6-fvh"/>
                             <constraint firstItem="4wq-Wo-TF8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nQF-37-Y73"/>
                             <constraint firstItem="vu3-Va-UNq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="oZN-g3-uzH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fcm-Pj-ZGl" secondAttribute="trailing" constant="50" id="twA-OX-2hW"/>
+                            <constraint firstItem="Fcm-Pj-ZGl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="wiY-EN-dun"/>
+                            <constraint firstItem="ja0-SE-1YA" firstAttribute="top" secondItem="fRo-dB-sbx" secondAttribute="bottom" constant="30" id="yQN-5S-QWF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

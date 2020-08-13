@@ -72,12 +72,36 @@
                                     <action selector="actionRegister:" destination="eWJ-PQ-3eh" eventType="touchUpInside" id="kcd-4S-8sQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5E-8W-9cD">
+                                <rect key="frame" x="50" y="419" width="314" height="40"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1ZC-3L-HQU"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="ログイン画面へ戻る"/>
+                                <connections>
+                                    <action selector="actionLogin:" destination="eWJ-PQ-3eh" eventType="touchUpInside" id="5Td-Xt-sHH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会員登録が完了いたしました。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBC-rz-zI9">
+                                <rect key="frame" x="50" y="519" width="314" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="YBC-rz-zI9" firstAttribute="top" secondItem="K5E-8W-9cD" secondAttribute="bottom" constant="60" id="3tx-Cn-79U"/>
+                            <constraint firstItem="K5E-8W-9cD" firstAttribute="top" secondItem="BjH-2e-jfx" secondAttribute="bottom" constant="30" id="5me-26-Ckl"/>
                             <constraint firstItem="5RW-XM-UAo" firstAttribute="leading" secondItem="ROw-1Y-Tg6" secondAttribute="leading" id="CK7-SX-jvz"/>
+                            <constraint firstItem="YBC-rz-zI9" firstAttribute="leading" secondItem="ROw-1Y-Tg6" secondAttribute="leading" constant="50" id="D2h-dM-ucX"/>
+                            <constraint firstItem="ROw-1Y-Tg6" firstAttribute="trailing" secondItem="YBC-rz-zI9" secondAttribute="trailing" constant="50" id="HzP-mT-2wO"/>
                             <constraint firstItem="ROw-1Y-Tg6" firstAttribute="trailing" secondItem="tWn-aB-XoK" secondAttribute="trailing" constant="50" id="I9d-7N-t4e"/>
+                            <constraint firstItem="ROw-1Y-Tg6" firstAttribute="trailing" secondItem="K5E-8W-9cD" secondAttribute="trailing" constant="50" id="Mof-CJ-F7n"/>
                             <constraint firstItem="BjH-2e-jfx" firstAttribute="leading" secondItem="ROw-1Y-Tg6" secondAttribute="leading" constant="50" id="Vp0-2O-WV3"/>
+                            <constraint firstItem="K5E-8W-9cD" firstAttribute="leading" secondItem="ROw-1Y-Tg6" secondAttribute="leading" constant="50" id="fxI-lo-iz5"/>
                             <constraint firstItem="tWn-aB-XoK" firstAttribute="leading" secondItem="ROw-1Y-Tg6" secondAttribute="leading" constant="50" id="hiX-Zf-Mbr"/>
                             <constraint firstItem="ROw-1Y-Tg6" firstAttribute="trailing" secondItem="BjH-2e-jfx" secondAttribute="trailing" constant="50" id="ksu-oW-Bco"/>
                             <constraint firstItem="BjH-2e-jfx" firstAttribute="top" secondItem="5RW-XM-UAo" secondAttribute="bottom" constant="10" id="qPv-m5-pdJ"/>
@@ -88,6 +112,7 @@
                         <viewLayoutGuide key="safeArea" id="ROw-1Y-Tg6"/>
                     </view>
                     <connections>
+                        <outlet property="completeRegistrationLabel" destination="YBC-rz-zI9" id="f0W-hr-laW"/>
                         <outlet property="mailInputView" destination="L1s-FG-qZL" id="CML-Ku-AvU"/>
                         <outlet property="passwordConfirmationView" destination="XMV-FV-s5J" id="CsR-dJ-8Qx"/>
                         <outlet property="passwordInputView" destination="MgT-k5-MXR" id="GJq-1G-WJK"/>

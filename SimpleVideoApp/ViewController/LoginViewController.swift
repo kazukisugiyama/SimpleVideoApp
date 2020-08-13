@@ -13,7 +13,6 @@ import UIKit
 
 protocol LoginViewControllerProtocol: BaseViewProtocol {
     func showPurchasedVideo()
-    func showPasswordReissue()
     func indicationUnregisteredError()
 }
 
@@ -42,8 +41,14 @@ class LoginViewController: BaseViewController {
         passwordInputView.actionCheckInputParts(succes: succes)
     }
     
+    @IBAction func actionRegistration(_ sender: Any) {
+        let storyboard = R.storyboard.registration()
+        showStoryBoard(storyboard)
+    }
+    
     @IBAction func actionReissue(_ sender: Any) {
-        presenter?.doPasswordReissue()
+        let storyboard = R.storyboard.passwordReissue()
+        showStoryBoard(storyboard)
     }
 }
 
@@ -55,13 +60,8 @@ extension LoginViewController: LoginViewControllerProtocol {
         showStoryBoard(storyboard)
     }
     
-    func showPasswordReissue() {
-        let storyboard = R.storyboard.passwordReissue()
-        showStoryBoard(storyboard)
-    }
-    
     func indicationUnregisteredError() {
-        // TODO: このタイミングでCustomViewを呼び出すとFatalError
-        print("error")
+        // TODO: 未実装
+        return
     }
 }

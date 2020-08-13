@@ -12,7 +12,6 @@ import UIKit
 
 protocol LoginPresenterProtocol: CommonPresenterProtocol {
     func doLogin(mail: String, password: String)
-    func doPasswordReissue()
 }
 
 // MARK: - class
@@ -38,9 +37,5 @@ extension LoginPresenter: LoginPresenterProtocol {
         }
         
         FirebaseService.shared.signIn(email: mail, password: password, succes: succes, error: error)
-    }
-    
-    func doPasswordReissue() {
-        self.viewController?.showPasswordReissue()
     }
 }
