@@ -29,7 +29,6 @@
 		B75EAA6324DC9F5900DEB06F /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EAA6224DC9F5900DEB06F /* VideoPlayerView.swift */; };
 		B75EAA6524DCA1F300DEB06F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EAA6424DCA1F300DEB06F /* VideoPlayerViewController.swift */; };
 		B762227124DDF6B40067BF20 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227024DDF6B40067BF20 /* FirebaseService.swift */; };
-		B762227324DDF9FC0067BF20 /* LoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227224DDF9FC0067BF20 /* LoginInfo.swift */; };
 		B762227524DDFA0B0067BF20 /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762227424DDFA0B0067BF20 /* VideoInfo.swift */; };
 		B7679D5324E19DD2005DEFF9 /* WiFiSettingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7679D5224E19DD2005DEFF9 /* WiFiSettingEntity.swift */; };
 		B77330F824DF919D0035902B /* FirebaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77330F724DF919D0035902B /* FirebaseStorageService.swift */; };
@@ -46,7 +45,6 @@
 		B782735024D8839B005A2FD6 /* MyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782734F24D8839B005A2FD6 /* MyListPresenter.swift */; };
 		B782735224D883AB005A2FD6 /* SearchVideoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735124D883AB005A2FD6 /* SearchVideoPresenter.swift */; };
 		B782735424D883B8005A2FD6 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735324D883B8005A2FD6 /* SettingPresenter.swift */; };
-		B782735A24D88445005A2FD6 /* DownloadedVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */; };
 		B785CE6A24D9C3B40036393B /* CommonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B785CE6924D9C3B40036393B /* CommonPresenter.swift */; };
 		B785CE6C24D9C44E0036393B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B785CE6B24D9C44E0036393B /* BaseViewController.swift */; };
 		B791312A24DA861E00E0892A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791312924DA861E00E0892A /* R.generated.swift */; };
@@ -92,7 +90,6 @@
 		B75EAA6224DC9F5900DEB06F /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		B75EAA6424DCA1F300DEB06F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		B762227024DDF6B40067BF20 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
-		B762227224DDF9FC0067BF20 /* LoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
 		B762227424DDFA0B0067BF20 /* VideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
 		B7679D5224E19DD2005DEFF9 /* WiFiSettingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiSettingEntity.swift; sourceTree = "<group>"; };
 		B77330F724DF919D0035902B /* FirebaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageService.swift; sourceTree = "<group>"; };
@@ -109,7 +106,6 @@
 		B782734F24D8839B005A2FD6 /* MyListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListPresenter.swift; sourceTree = "<group>"; };
 		B782735124D883AB005A2FD6 /* SearchVideoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoPresenter.swift; sourceTree = "<group>"; };
 		B782735324D883B8005A2FD6 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
-		B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedVideoModel.swift; sourceTree = "<group>"; };
 		B785CE6924D9C3B40036393B /* CommonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPresenter.swift; sourceTree = "<group>"; };
 		B785CE6B24D9C44E0036393B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B791312924DA861E00E0892A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -189,9 +185,7 @@
 				B762227024DDF6B40067BF20 /* FirebaseService.swift */,
 				B77330F724DF919D0035902B /* FirebaseStorageService.swift */,
 				B7A2DEC424E181D50028E5DF /* NetworkStatusService.swift */,
-				B762227224DDF9FC0067BF20 /* LoginInfo.swift */,
 				B762227424DDFA0B0067BF20 /* VideoInfo.swift */,
-				B782735924D88445005A2FD6 /* DownloadedVideoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -472,7 +466,6 @@
 				B7A2DEC924E1978B0028E5DF /* Constant.swift in Sources */,
 				B791312C24DA8C8600E0892A /* PurchasedVideoViewController.swift in Sources */,
 				B72F39C324DB55190005CD8E /* SlideMenuViewController.swift in Sources */,
-				B782735A24D88445005A2FD6 /* DownloadedVideoModel.swift in Sources */,
 				B782735224D883AB005A2FD6 /* SearchVideoPresenter.swift in Sources */,
 				B729E94924DC3FA200ACB551 /* MyListViewController.swift in Sources */,
 				B791312A24DA861E00E0892A /* R.generated.swift in Sources */,
@@ -481,7 +474,6 @@
 				B72F39C124DB4CC40005CD8E /* DownloadedVideoViewController.swift in Sources */,
 				B729E94B24DC3FC100ACB551 /* MyListBaseViewController.swift in Sources */,
 				B729E94324DC3EEE00ACB551 /* PurchasedVideoBaseViewController.swift in Sources */,
-				B762227324DDF9FC0067BF20 /* LoginInfo.swift in Sources */,
 				B782734C24D88380005A2FD6 /* PurchasedVideoPresenter.swift in Sources */,
 				B75CB48924DEEDBB00400448 /* RegistrationViewController.swift in Sources */,
 				B782734E24D8838C005A2FD6 /* DownloadedVideoPresenter.swift in Sources */,

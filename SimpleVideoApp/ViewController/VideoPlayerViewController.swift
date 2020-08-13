@@ -214,19 +214,14 @@ class VideoPlayerViewController: BaseViewController {
         }
     }
     
-    private func showPurchasedVideo() {
-        let storyboard = R.storyboard.downloadedVideo()
-        showStoryBoard(storyboard)
-    }
-    
 }
 
 // MARK: - extension
 
 extension VideoPlayerViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
-        // 前画面へ戻る
-        showPurchasedVideo()
+        let storyboard = R.storyboard.downloadedVideoBase()
+        showStoryBoard(storyboard)
     }
 
     func actionRightButton1() {

@@ -12,7 +12,6 @@ import UIKit
 // MARK: - protocol
 
 protocol DownloadedVideoPresenterProtocol: CommonPresenterProtocol {
-    func displayAllVideo()
     func doReadVideoInfo(succes: @escaping (_ item: [String]) -> Void)
 }
 
@@ -20,7 +19,6 @@ protocol DownloadedVideoPresenterProtocol: CommonPresenterProtocol {
 
 class DownloadedVideoPresenter: CommonPresenter {
     let entity: VideoInfoEntity
-    var model: DownloadedVideoModelProtocol?
     
     override init() {
         entity = VideoInfoEntity()
@@ -32,9 +30,5 @@ class DownloadedVideoPresenter: CommonPresenter {
 extension DownloadedVideoPresenter: DownloadedVideoPresenterProtocol {
     func doReadVideoInfo(succes: @escaping ([String]) -> Void) {
         entity.readVideoInfoEntity(succes: succes)
-    }
-    
-    func displayAllVideo() {
-        model?.downLoadVideo()
     }
 }
