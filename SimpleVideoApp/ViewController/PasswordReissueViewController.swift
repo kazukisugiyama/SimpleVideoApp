@@ -18,41 +18,29 @@ protocol PasswordReissueViewControllerProtocol: BaseViewProtocol {
 
 class PasswordReissueViewController: BaseViewController {
     
-    var presenter: PasswordReissuePresenter?
+    var presenter: PasswordReissuePresenterProtocol?
     
     @IBOutlet weak var mailInputView: CustomInputPartsView!
     @IBOutlet weak var completedLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = PasswordReissuePresenter(view: self)
         completedLabel.isHidden = true
     }
     
     @IBAction func actionPasswordReissue(_ sender: Any) {
         let succesCheckText = { () -> Void in
-            self.passwordReset()
+            guard let mail = self.mailInputView.inputTextField.text else { return }
+            self.presenter?.doPasswordReset(mail: mail)
         }
         mailInputView.actionCheckInputParts(succes: succesCheckText)
     }
     
     @IBAction func actionShowLogin(_ sender: Any) {
-        showLogin()
-    }
-    
-    private func passwordReset() {
-        guard let mail = mailInputView.inputTextField.text else { return }
-        
-        let succesPasswrdReset = { () -> Void in
-            self.sendCompletely()
-        }
-        FirebaseService.shared.passwordReset(email: mail, succes: succesPasswrdReset)
-    }
-    
-    private func showLogin() {
         let storyboard = R.storyboard.login()
         showStoryBoard(storyboard)
     }
-    
 }
 
 // MARK: - extension

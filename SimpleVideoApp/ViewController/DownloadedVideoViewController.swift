@@ -9,16 +9,10 @@
 import SlideMenuControllerSwift
 import UIKit
 
-// MARK: - protocol
-
-protocol DownloadedVideoViewControllerProtocol: BaseViewProtocol {
-}
-
 // MARK: - class
 
 class DownloadedVideoViewController: BaseViewController {
     
-    let entity = VideoInfoEntity()
     private var videoInfo: [VideoInfo] = []
     private var presenter: DownloadedVideoPresenterProtocol?
     
@@ -27,6 +21,7 @@ class DownloadedVideoViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = DownloadedVideoPresenter()
         header.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
@@ -43,7 +38,8 @@ class DownloadedVideoViewController: BaseViewController {
                 self.videoInfo.append(VideoInfo(title: item))
             }
         }
-        entity.readVideoInfoEntity(succes: succes)
+        
+        presenter?.doReadVideoInfo(succes: succes)
     }
     
     private func showVideoPlayer(name: String, path: String) {
@@ -55,10 +51,8 @@ class DownloadedVideoViewController: BaseViewController {
         vc.filePath = filePath
         vc.modalPresentationStyle = .fullScreen
         
-        guard let rootViewController = UIApplication.shared.keyWindow?.rootViewController else { return }
-        rootViewController.present(vc, animated: true, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController = vc
     }
-    
 }
 
 // MARK: - extension

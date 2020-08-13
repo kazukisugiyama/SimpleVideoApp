@@ -10,19 +10,12 @@ import UIKit
 import Rswift
 import FirebaseStorage
 
-// MARK: - protocol
-
-protocol PurchasedVideoViewControllerProtocol: BaseViewProtocol {
-    //func testes(items: [StorageReference])
-}
-
 // MARK: - class
 
 class PurchasedVideoViewController: BaseViewController {
     
     private var presenter: PurchasedVideoPresenterProtocol?
-    private var model: FirebaseStorageServiceProtocol?
-    private var testVideo: [VideoInfo] = []
+    private var videoInfo: [VideoInfo] = []
     
     @IBOutlet weak var header: CustomNavigationBarView!
     @IBOutlet weak var tableView: UITableView!
@@ -30,6 +23,7 @@ class PurchasedVideoViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = PurchasedVideoPresenter()
         header.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
@@ -38,10 +32,6 @@ class PurchasedVideoViewController: BaseViewController {
         tableView.register(nib, forCellReuseIdentifier: "VideoListTableViewCell")
         
         showStorageAllVideo(isSync: false)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
     }
     
     @IBAction func actionSort(_ sender: Any) {
@@ -57,25 +47,20 @@ class PurchasedVideoViewController: BaseViewController {
         let succes = { (item: String) -> Void in
             if (isSync) {
                 var titles: [String] = []
-                for title in self.testVideo {
+                for title in self.videoInfo {
                     titles.append(title.videoTitle)
                 }
                 guard !titles.contains(item) else { return }
             }
             
-            self.testVideo.append(VideoInfo(title: item))
+            self.videoInfo.append(VideoInfo(title: item))
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
-        FirebaseStorageService.shared.displayStorageAllVideo(succes: succes)
+        presenter?.doDisplayStorageAllVideo(succes: succes)
     }
-    
-    private func showDownloadedVideo() {
-        let storyboard = R.storyboard.downloadedVideoBase()
-        showStoryBoard(storyboard)
-    }
-    
+
 }
 
 // MARK: - extension
@@ -102,14 +87,14 @@ extension PurchasedVideoViewController: UITableViewDelegate {
 
 extension PurchasedVideoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testVideo.count
+        return videoInfo.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "VideoListTableViewCell", for: indexPath) as? VideoListTableViewCell else {
             return UITableViewCell()
         }
-        cell.videoModel = testVideo[indexPath.row]
+        cell.videoModel = videoInfo[indexPath.row]
         return cell
     }
 }

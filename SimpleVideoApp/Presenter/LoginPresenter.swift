@@ -18,12 +18,10 @@ protocol LoginPresenterProtocol: CommonPresenterProtocol {
 // MARK: - class
 
 class LoginPresenter: CommonPresenter {
-    var firebaseService: FirebaseServiceProtocol?
-    var viewController: LoginViewControllerProtocol?
+    private weak var viewController: LoginViewControllerProtocol?
     
-    // TODO: 書き方
-    override init() {
-        viewController = LoginViewController()
+    init(view: LoginViewController) {
+        self.viewController = view
     }
 }
 
@@ -31,14 +29,11 @@ class LoginPresenter: CommonPresenter {
 
 extension LoginPresenter: LoginPresenterProtocol {
     func doLogin(mail: String, password: String) {
-        print("pr doLogin")
         let succes = { () -> Void in
-            print("pr succes")
             self.viewController?.showPurchasedVideo()
         }
         
         let error = { () -> Void in
-            print("pr succes")
             self.viewController?.indicationUnregisteredError()
         }
         
@@ -46,7 +41,6 @@ extension LoginPresenter: LoginPresenterProtocol {
     }
     
     func doPasswordReissue() {
-        print("pr doPasswordReissue")
         self.viewController?.showPasswordReissue()
     }
 }

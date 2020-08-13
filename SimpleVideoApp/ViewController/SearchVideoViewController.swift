@@ -19,17 +19,14 @@ class SearchVideoViewController: BaseViewController {
         header.delegate = self
     }
     
-    private func showPurchasedVideo() {
-        let storyboard = R.storyboard.purchasedVideoBase()
-        showStoryBoard(storyboard)
-    }
 }
 
 // MARK: - extension
 
 extension SearchVideoViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
-        showPurchasedVideo()
+        let storyboard = R.storyboard.purchasedVideoBase()
+        showStoryBoard(storyboard)
     }
     
     func actionRightButton1() {

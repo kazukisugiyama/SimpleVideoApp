@@ -19,7 +19,6 @@ class VideoPlayerViewController: BaseViewController {
     var asset: AVAsset?
     var currentTime: CMTime?
     var cuurentRate: Float = 0
-    var fileName: String = ""
     var filePath: String = ""
     var periodicTimeObserverToken: Any?
     var periodicBoundaryObserverToken: Any?

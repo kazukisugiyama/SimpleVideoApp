@@ -28,6 +28,7 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = LoginPresenter(view: self)
     }
     
     @IBAction func actionLogin(_ sender: Any) {
@@ -35,28 +36,15 @@ class LoginViewController: BaseViewController {
             let password = passwordInputView.inputTextField.text else { return }
         
         let succes = { () -> Void in
-            print("succes clouser")
-            self.doLogin(mail: mail, password: password)
+            self.presenter?.doLogin(mail: mail, password: password)
         }
         mailInputView.actionCheckInputParts(succes: succes)
         passwordInputView.actionCheckInputParts(succes: succes)
     }
     
     @IBAction func actionReissue(_ sender: Any) {
-        showPasswordReissue()
+        presenter?.doPasswordReissue()
     }
-    
-    private func doLogin(mail: String, password: String) {
-        let succes = { () -> Void in
-            self.showPurchasedVideo()
-        }
-        let error = { () -> Void in
-            self.indicationUnregisteredError()
-        }
-        
-        FirebaseService.shared.signIn(email: mail, password: password, succes: succes, error: error)
-    }
-    
 }
 
 // MARK: - extension

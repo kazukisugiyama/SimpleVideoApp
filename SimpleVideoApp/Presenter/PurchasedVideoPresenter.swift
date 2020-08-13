@@ -12,34 +12,17 @@ import FirebaseStorage
 // MARK: - protocol
 
 protocol PurchasedVideoPresenterProtocol: CommonPresenterProtocol {
-    func displayAllVideo()
+    func doDisplayStorageAllVideo(succes: @escaping (_ item: String) -> Void)
 }
 
 // MARK: - class
 
-class PurchasedVideoPresenter: CommonPresenter {
-    var model: FirebaseStorageServiceProtocol?
-    var viewController: PurchasedVideoViewControllerProtocol?
-    
-    // TODO: ここでインスタンス化すべきじゃない
-    override init() {
-        //model = FirebaseStorageService()
-        viewController = PurchasedVideoViewController() as! PurchasedVideoViewControllerProtocol
-    }
-}
+class PurchasedVideoPresenter: CommonPresenter {}
 
 // MARK: - extension
 
 extension PurchasedVideoPresenter: PurchasedVideoPresenterProtocol {
-    func displayAllVideo() {
-        /*
-        print("displayAllVideo")
-        let succes = { (items: [StorageReference]) -> Void in
-            print("pr succes")
-            self.viewController?.testes(items: items)
-        }
-        
-        model?.tes(succes: succes)
- */
+    func doDisplayStorageAllVideo(succes: @escaping (_ item: String) -> Void) {
+        FirebaseStorageService.shared.displayStorageAllVideo(succes: succes)
     }
 }

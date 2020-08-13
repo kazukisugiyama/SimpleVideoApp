@@ -11,31 +11,36 @@ import UIKit
 // MARK: - protocol
 
 protocol PasswordReissuePresenterProtocol: CommonPresenterProtocol {
-    func setViewControllerProtocol(viewController: PasswordReissueViewControllerProtocol)
     func doReset(mail: String)
+    func doPasswordReset(mail: String)
 }
 
 // MARK: - class
 
 class PasswordReissuePresenter: CommonPresenter {
-    var firebaseService: FirebaseServiceProtocol?
     weak var viewController: PasswordReissueViewControllerProtocol?
+    
+    init(view: PasswordReissueViewController) {
+        self.viewController = view
+    }
 }
 
 // MARK: - extension
 
 extension PasswordReissuePresenter: PasswordReissuePresenterProtocol {
-    func setViewControllerProtocol(viewController: PasswordReissueViewControllerProtocol) {
-        self.viewController = viewController
-    }
-    
     func doReset(mail: String) {
-        NSLog("doLogin pr")
         let succes = { () -> Void in
             self.viewController?.sendCompletely()
         }
         
-        firebaseService?.passwordReset(email: mail, succes: succes)
+        FirebaseService.shared.passwordReset(email: mail, succes: succes)
+    }
+    
+    func doPasswordReset(mail: String) {
+        let succesPasswrdReset = { () -> Void in
+            self.viewController?.sendCompletely()
+        }
+        FirebaseService.shared.passwordReset(email: mail, succes: succesPasswrdReset)
     }
 }
 

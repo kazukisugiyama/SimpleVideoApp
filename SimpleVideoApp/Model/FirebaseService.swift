@@ -12,7 +12,7 @@ import FirebaseAuth
 protocol FirebaseServiceProtocol {
     func memberRegistration(email: String, password: String, succes: @escaping () -> Void)
     func signIn(email: String, password: String, succes: @escaping () -> Void, error: @escaping () -> Void)
-    func signOut()
+    func signOut(succes: @escaping () -> Void)
     func passwordReset(email: String, succes: @escaping () -> Void)
 }
 
@@ -46,9 +46,10 @@ extension FirebaseService: FirebaseServiceProtocol {
         }
     }
     
-    func signOut() {
+    func signOut(succes: @escaping () -> Void) {
         do {
             try Auth.auth().signOut()
+            succes()
             print("signOut succes")
         } catch let error as NSError {
             print("firebase signOut error : \(error)")

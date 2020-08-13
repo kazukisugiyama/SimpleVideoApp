@@ -6,4 +6,6 @@
 //  Copyright © 2020 杉山和輝. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MyListPresenter: CommonPresenter {}

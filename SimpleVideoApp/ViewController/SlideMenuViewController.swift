@@ -30,7 +30,8 @@ class SlideMenuViewController: BaseViewController {
             closeSlideMenu()
             return
         }
-        showPurchasedVideo()
+        let storyboard = R.storyboard.purchasedVideoBase()
+        showStoryBoard(storyboard)
     }
     
     @IBAction func actionDownLoadedVideo(_ sender: Any) {
@@ -38,7 +39,8 @@ class SlideMenuViewController: BaseViewController {
             closeSlideMenu()
             return
         }
-        showDownloadedVideo()
+        let storyboard = R.storyboard.downloadedVideoBase()
+        showStoryBoard(storyboard)
     }
     
     @IBAction func actionMyList(_ sender: Any) {
@@ -46,43 +48,21 @@ class SlideMenuViewController: BaseViewController {
             closeSlideMenu()
             return
         }
-        showMyList()
-    }
-    
-    @IBAction func actionSearch(_ sender: Any) {
-        showSearchVideo()
-    }
-    
-    @IBAction func actionSetting(_ sender: Any) {
-        showSetting()
-    }
-    
-    // MARK: - private method
-    
-    private func showPurchasedVideo() {
-        let storyboard = R.storyboard.purchasedVideoBase()
-        showStoryBoard(storyboard)
-    }
-    
-    private func showDownloadedVideo() {
-        let storyboard = R.storyboard.downloadedVideoBase()
-        showStoryBoard(storyboard)
-    }
-    
-    private func showMyList() {
         let storyboard = R.storyboard.myListBase()
         showStoryBoard(storyboard)
     }
     
-    private func showSearchVideo() {
+    @IBAction func actionSearch(_ sender: Any) {
         let storyboard = R.storyboard.searchVideo()
         showStoryBoard(storyboard)
     }
     
-    private func showSetting() {
+    @IBAction func actionSetting(_ sender: Any) {
         let storyboard = R.storyboard.setting()
         showStoryBoard(storyboard)
     }
+    
+    // MARK: - private method
     
     private func closeSlideMenu() {
         guard let slideMenuController = slideMenuController() else { return }

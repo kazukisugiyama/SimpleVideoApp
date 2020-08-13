@@ -13,24 +13,28 @@ import UIKit
 
 protocol DownloadedVideoPresenterProtocol: CommonPresenterProtocol {
     func displayAllVideo()
+    func doReadVideoInfo(succes: @escaping (_ item: [String]) -> Void)
 }
 
 // MARK: - class
 
 class DownloadedVideoPresenter: CommonPresenter {
+    let entity: VideoInfoEntity
     var model: DownloadedVideoModelProtocol?
     
-    // TODO: ここでインスタンス化すべきじゃない
     override init() {
-        model = DownloadedVideoModel()
+        entity = VideoInfoEntity()
     }
 }
 
 // MARK: - extension
 
 extension DownloadedVideoPresenter: DownloadedVideoPresenterProtocol {
+    func doReadVideoInfo(succes: @escaping ([String]) -> Void) {
+        entity.readVideoInfoEntity(succes: succes)
+    }
+    
     func displayAllVideo() {
-        print("displayAllVideo")
         model?.downLoadVideo()
     }
 }

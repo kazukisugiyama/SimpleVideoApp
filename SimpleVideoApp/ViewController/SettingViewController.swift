@@ -12,7 +12,7 @@ import UIKit
 
 class SettingViewController: BaseViewController {
 
-    let entity = WiFiSettingEntity()
+    private var presenter: SettingPresenterProtocol?
     
     @IBOutlet weak var header: CustomNavigationBarView!
     @IBOutlet weak var streamingSettingSwitch: UISwitch!
@@ -20,21 +20,25 @@ class SettingViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = SettingPresenter()
         header.delegate = self
         readSettingForRealm()
     }
     
     @IBAction func actionLogout(_ sender: Any) {
-        FirebaseService.shared.signOut()
-        showLogin()
+        let succes = { () -> Void in
+            let storyboard = R.storyboard.login()
+            self.showStoryBoard(storyboard)
+        }
+        presenter?.doSignOut(succes: succes)
     }
     
     @IBAction func actionIsWiFiOnlyStreaming(_ sender: UISwitch) {
-        entity.writeStreamSetting(isValid: sender.isOn)
+        presenter?.doUpdateStreamSetting(isValid: sender.isOn)
     }
     
     @IBAction func actionIsWiFiOnlyDownload(_ sender: UISwitch) {
-        entity.writeDownloadSetting(isValid: sender.isOn)
+        presenter?.doUpdateDownloadSetting(isValid: sender.isOn)
     }
     
     private func readSettingForRealm() {
@@ -42,19 +46,7 @@ class SettingViewController: BaseViewController {
             self.streamingSettingSwitch.isOn = isStreamOnly
             self.downloadSettingSwitch.isOn = isDownloadOnly
         }
-        // initは初期表示時のみ動作（Realmオブジェクトの追加を行う）
-        entity.initEntity()
-        entity.readEntity(succes: succes)
-    }
-    
-    private func showLogin() {
-        let storyboard = R.storyboard.login()
-        showStoryBoard(storyboard)
-    }
-    
-    private func showPurchasedVideo() {
-        let storyboard = R.storyboard.purchasedVideoBase()
-        showStoryBoard(storyboard)
+        presenter?.doReadSetting(succes: succes)
     }
 }
 
@@ -62,7 +54,8 @@ class SettingViewController: BaseViewController {
 
 extension SettingViewController: CustomNavigationBarViewDelegate {
     func actionLeftButton() {
-        showPurchasedVideo()
+        let storyboard = R.storyboard.purchasedVideoBase()
+        showStoryBoard(storyboard)
     }
 
     func actionRightButton1() {
